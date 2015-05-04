@@ -1,6 +1,6 @@
 #-*- coding:utf-8 -*-
 import requests
-import http.cookiejar
+import http.cookieJar
 import hashlib
 import time
 from . import regexp
@@ -15,22 +15,21 @@ class session:
     }
     username = ""
     guestSession = False
-    cookiejar = ""
+    cookieJar = ""
     securityToken = ""
-    content = ""
 
     def __init__(self, uname, passwd=None, md5bool=False):
-        if passwd is not None:
+        if passwd is not None: #Checks if User Session
             if md5bool == True:
                 md5 = passwd
             else:
                 md5 = hashlib.md5(passwd.encode("utf-8"));md5 = md5.hexdigest()
             self.login(uname, md5)
             self.username = uname
-        elif uname == "guest":
+        elif uname == "guest": #Checks if Guest Session
             self.username = "guest"
             self.guestSession = True
-            self.cookiejar = requests.cookies.RequestsCookieJar()
+            self.cookieJar = requests.cookies.RequestscookieJar()
             self.securityToken = "guest"
         else: 
             return "No PW given"
@@ -50,11 +49,10 @@ class session:
 
         r = requests.post(loginnurl, data=params, headers=self.headers)
         
-        self.cookiejar = r.cookies
+        self.cookieJar = r.cookies
 
-        r = requests.get("http://www.elitepvpers.com/forum/usercp.php", headers=self.headers, cookies=self.cookiejar)
+        r = requests.get("http://www.elitepvpers.com/forum/usercp.php", headers=self.headers, cookies=self.cookieJar)
         self.securityToken = regexp.regexp.match("SECURITYTOKEN = \"(\S+)\";", r.content)
-        self.content = str(r.content)
 
     def logout(self):
-        requests.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + securityToken, headers=self.headers, cookies=self.cookiejar)
+        requests.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + securityToken, headers=self.headers, cookies=self.cookieJar)
