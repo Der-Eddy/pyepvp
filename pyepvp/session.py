@@ -13,16 +13,27 @@ class session:
         "Accept-Encoding": "gzip,deflate",
         "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
     }
+    username = ""
+    guestSession = False
     cookiejar = ""
     securityToken = ""
     content = ""
 
-    def __init__(self, uname, passwd, md5bool=False):
-        if md5bool == True:
-            md5 = passwd
-        else:
-            md5 = hashlib.md5(passwd.encode("utf-8"));md5 = md5.hexdigest()
-        self.login(uname, md5)
+    def __init__(self, uname, passwd=None, md5bool=False):
+        if passwd is not None:
+            if md5bool == True:
+                md5 = passwd
+            else:
+                md5 = hashlib.md5(passwd.encode("utf-8"));md5 = md5.hexdigest()
+            self.login(uname, md5)
+            self.username = uname
+        elif uname == "guest":
+            self.username = "guest"
+            self.guestSession = True
+            self.cookiejar = requests.cookies.RequestsCookieJar()
+            self.securityToken = "guest"
+        else: 
+            return "No PW given"
 
     def login(self, uname, md5):
         loginnurl = "http://www.elitepvpers.com/forum/login.php?do=login&langid=1"
