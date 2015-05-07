@@ -1,6 +1,4 @@
-#-*- coding:utf-8 -*-
 import requests
-import http.cookieJar
 import hashlib
 import time
 from . import regexp
@@ -29,7 +27,7 @@ class session:
         elif uname == "guest": #Checks if Guest Session
             self.username = "guest"
             self.guestSession = True
-            self.cookieJar = requests.cookies.RequestscookieJar()
+            self.cookieJar = requests.cookies.RequestsCookieJar()
             self.securityToken = "guest"
         else: 
             return "No PW given"
@@ -52,7 +50,7 @@ class session:
         self.cookieJar = r.cookies
 
         r = requests.get("http://www.elitepvpers.com/forum/usercp.php", headers=self.headers, cookies=self.cookieJar)
-        self.securityToken = regexp.regexp.match("SECURITYTOKEN = \"(\S+)\";", r.content)
+        self.securityToken = regexp.match("SECURITYTOKEN = \"(\S+)\";", r.content)
 
     def logout(self):
-        requests.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + securityToken, headers=self.headers, cookies=self.cookieJar)
+        requests.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken, headers=self.headers, cookies=self.cookieJar)
