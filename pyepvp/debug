@@ -1,0 +1,2370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <base href="http://www.elitepvpers.com/forum/"/>
+  <!--[if IE]></base><![endif]-->
+  <link href="//googleads.g.doubleclick.net" rel="dns-prefetch"/>
+  <link href="//www.google-analytics.com" rel="dns-prefetch"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="vBulletin" name="generator"/>
+  <meta content="" name="keywords"/>
+  <meta content="MMO Insider Forums - anything about Hacks, Bots, Cheats, Guides and more!" name="description"/>
+  <link href="https://plus.google.com/105125205325056351077" rel="publisher"/>
+  <link href="http://www.elitepvpers.com" rel="home"/>
+  <link href="http://www.elitepvpers.com/forum/search.php" rel="search"/>
+  <style id="vbulletin_css" type="text/css">
+   @import url("http://www.elitepvpers.com/forum/clientscript/vbulletin_css/style-9f29288f-00003.css");
+  </style>
+  <link href="http://www.elitepvpers.com/forum/clientscript/vbulletin_important.css?v=388b3" rel="stylesheet" type="text/css"/>
+  <link href="http://www.elitepvpers.com/forum/mwmods/bbcodes/css/bbcodes.min.css?v=1.1" id="addtional_bbcodes_static" media="screen" rel="stylesheet" type="text/css"/>
+  <style id="addtional_bbcodes_dynamic" type="text/css">
+   .signature-preview{background-position:50% 350px,0px 0px;}div[id^=post_signature_].limited{overflow:hidden;max-height:350px;max-width:765px;}
+  </style>
+  <link href="http://www.elitepvpers.com/forum/mwmods/bbcodes/css/jquery.fancybox.css?v=2.1.5" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="http://www.elitepvpers.com/forum/mwmods/bbcodes/js/helpers/jquery.fancybox-thumbs.css?v=1.0.7" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="http://www.elitepvpers.com/forum/mwmods/bbcodes/css/themes/twelve/galleria.twelve.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="http://www.elitepvpers.com/css/global.css?12" rel="stylesheet" type="text/css"/>
+  <script src="//yui-s.yahooapis.com/2.9.0/build/yahoo-dom-event/yahoo-dom-event.js?v=388b3" type="text/javascript">
+  </script>
+  <script src="//yui-s.yahooapis.com/2.9.0/build/connection/connection-min.js?v=388b3" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   <!--
+var SESSIONURL = "s=270684d406f921dd6564e804a0a8004d&";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+  </script>
+  <script src="http://www.elitepvpers.com/forum/clientscript/vbulletin_global.js?v=388b3" type="text/javascript">
+  </script>
+  <link href="http://www.elitepvpers.com/forum/external.php?type=RSS2" rel="alternate" title="elitepvpers RSS Feed" type="application/rss+xml"/>
+  <script type="text/javascript">
+   (function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+  </script>
+  <script type="text/javascript">
+   googletag.defineSlot('/1012513/elitepvpers_Forum_ATF_728x90', [728, 90], 'div-gpt-ad-1392303584193-0').addService(googletag.pubads());
+googletag.defineSlot('/1012513/elitepvpers_Forum_Footer_728x90', [728, 90], 'div-gpt-ad-1392303584193-1').addService(googletag.pubads());
+googletag.defineSlot('/1012513/elitepvpers_Forum_Postbit_336x280', [336, 280], 'div-gpt-ad-1392303584193-2').addService(googletag.pubads());
+googletag.defineSlot('/1012513/elitepvpers_Forum_Postbit_336x280_r', [336, 280], 'div-gpt-ad-1392303584193-3').addService(googletag.pubads());
+googletag.defineSlot('/1012513/elitepvpers_Forum_Postbit_728x90', [728, 90], 'div-gpt-ad-1392303584193-4').addService(googletag.pubads());
+googletag.defineSlot('/1012513/elitepvpers_Interstitial_1x1', [1, 1], 'div-gpt-ad-1392303584193-5').addService(googletag.pubads());
+googletag.defineSlot('/1012513/elitepvpers_Intext_1x1', [1, 1], 'div-gpt-ad-1392303584193-6').addService(googletag.pubads());
+googletag.defineSlot('/1012513/elitepvpers_Wide_Skyscraper_160x600', [160, 600], 'div-gpt-ad-1392303584193-7').addService(googletag.pubads());
+googletag.defineSlot('/1012513/elitepvpers_Forum_Mid_Postbit_728x90', [728, 90], 'div-gpt-ad-1392303584193-8').addService(googletag.pubads());
+
+googletag.pubads().setTargeting("Portal","0");
+
+googletag.pubads().setTargeting("ForumID","206");
+
+
+googletag.pubads().setTargeting("Loggedin","0");
+
+
+googletag.pubads().setTargeting("Showthread","0");
+
+
+googletag.pubads().setTargeting("System","1");
+
+
+googletag.pubads().enableSyncRendering();
+googletag.enableServices();
+  </script>
+  <link href="http://www.elitepvpers.com/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="http://www.elitepvpers.com/forum/clientscript/prettify/prettify.css" rel="stylesheet" type="text/css"/>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   <!--
+// Init local phrases
+vbphrase['image_x_of_y'] = 'Image %s of %s';
+vbphrase['show_thumbnails'] = 'Show Thumbnails';
+vbphrase['hide_thumbnails'] = 'Hide Thumbnails';
+vbphrase['play_slideshow'] = 'Play Slideshow';
+vbphrase['pause_slideshow'] = 'Pause Slideshow';
+vbphrase['enter_fullscreen'] = 'Enter Fullscreen';
+vbphrase['exit_fullscreen'] = 'Exit Fullscreen';
+vbphrase['gallery_block_new'] = 'This gallery is currently not displayed, because the poster is too new to use image galleries in posts.';
+vbphrase['gallery_block_ban'] = 'This gallery is currently blocked, because an administrator has revoked the poster\'s right to use image galleries in posts.';
+vbphrase['show_gallery'] = 'Show Gallery';
+vbphrase['you_must_register'] = 'You must register and activate your account to access image galleries.';
+vbphrase['register_now'] = 'Register now!';
+vbphrase['display_in_full_size'] = 'Display image in full size';
+vbphrase['fit_to_viewport'] = 'Fit image to viewport';
+vbphrase['follow_external_link'] = 'Follow external link';
+vbphrase['invalid_image_url'] = 'Invalid Image URL';
+// -->
+  </script>
+  <script src="http://www.elitepvpers.com/forum/mwmods/bbcodes/js/bbcode.spoiler.min.js?v=1.1.1" type="text/javascript">
+  </script>
+  <script src="http://www.elitepvpers.com/forum/mwmods/bbcodes/js/jquery.rescale.min.js?v=1.1.1" type="text/javascript">
+  </script>
+  <script src="http://www.elitepvpers.com/forum/mwmods/bbcodes/js/bbcode.gallery.min.js?v=1.1.1" type="text/javascript">
+  </script>
+  <script src="http://www.elitepvpers.com/forum/mwmods/bbcodes/js/jquery.fancybox.min.js?v=2.1.5" type="text/javascript">
+  </script>
+  <script src="http://www.elitepvpers.com/forum/mwmods/bbcodes/js/helpers/jquery.fancybox-thumbs.js?v=1.0.7" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   <!--
+(function($)
+{
+    // Set spoiler options
+    setSpoilerOptions(JSON.parse('{"disableStyles":false,"animationSpeed":0,"maxSigHeight":350}'));
+
+    // Init block list for gallery tags
+    $.extend(true, $.fn.initGalleria.options, { 'general':
+    {
+        thumbnails: 'lazy',
+        transition: false,
+        imageCrop: false,
+        imageMargin: 0,
+        fullscreenTransition: false,
+        maxScaleRatio: 1,
+        dummy: 'http://www.elitepvpers.com/forum/mwmods/bbcodes/css/img/dummy_image.jpg',
+        debug: false,
+        wait: true,
+        idleTime: 2000,
+        imageTimeout: 5000,
+
+        // Localized strings
+        _locale: {
+            show_thumbnails: vbphrase.show_thumbnails,
+            hide_thumbnails: vbphrase.hide_thumbnails,
+            play: vbphrase.play_slideshow,
+            pause: vbphrase.pause_slideshow,
+            enter_fullscreen: vbphrase.enter_fullscreen,
+            exit_fullscreen: vbphrase.exit_fullscreen,
+            showing_image: vbphrase.image_x_of_y
+        },
+
+        // Twelve theme options
+        _showPopout: false
+    }}, JSON.parse('{"autoLoadMax":2,"blockList":[2],"blockAccess":true}'));
+
+    // Init defaults for image rescaling
+    $.extend(true, $.fn.rescale.defaults, JSON.parse('{"limits":{"sig":[765,200],"vm":[630,965],"vm_conv":[880,965],"sgm":[950,965],"pm":[600,965],"pc":[880,965],"blog":[740,965],"blog_sn":[570,965],"other":[765,965]},"margins":{"spoiler":10,"quote":27,"internal":12,"list":20,"indent":40}}'));
+
+    
+    $.extend($.fancybox.defaults, {
+        openEffect: 'none',
+        closeEffect: 'none',
+        nextEffect: 'none',
+        prevEffect: 'none'
+    });
+    
+})(jQuery);
+// -->
+  </script>
+  <script src="http://www.elitepvpers.com/forum/mwmods/bbcodes/js/bbcode.img.min.js?v=1.1.1" type="text/javascript">
+  </script>
+  <script src="http://www.elitepvpers.com/forum/mwmods/bbcodes/js/jquery.mousewheel-3.0.6.pack.js" type="text/javascript">
+  </script>
+  <script src="http://www.elitepvpers.com/forum/mwmods/bbcodes/js/galleria-1.3.2.min.js?v=1.3.2c" type="text/javascript">
+  </script>
+  <script src="http://www.elitepvpers.com/forum/mwmods/bbcodes/css/themes/twelve/galleria.twelve.min.js" type="text/javascript">
+  </script>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-28042874-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script type="text/javascript">
+   $.browser = {
+	msie: window.is_ie || false,
+	mozilla: window.is_moz || false
+};
+  </script>
+  <script src="http://www.elitepvpers.com/forum/clientscript/mgc_cb_evo_add/js/jquery.blockUI.js?v=1.0" type="text/javascript">
+  </script>
+  <script id="loginjsinc" type="text/javascript">
+   <!--
+(function(a){a.loadScript=function(b,c){return $.ajax(a.extend(c||{},{dataType:"script",cache:!0,url:b,dataFilter:function(a){return a.replace("%SCRIPT_OPTIONS%","W251bGwsImh0dHA6XC9cL3d3dy5lbGl0ZXB2cGVycy5jb21cL2ZvcnVtIiwibG9naW50b2tlbiIsImxvZ2ludXVpZHYyIiwibWV0aG9kdXVpZHYyIiwibG9naW51dWlkdjMiLCJtZXRob2R1dWlkdjMiLCJhOTcwZGQ5YTI5M2U4ODc3Y2IyOTBjOGI0ZmQ4ZjQyYmJhYjE3ZTY3IiwiMS4xIixmYWxzZSxmYWxzZV0=")}}))};a.loadScript("http://www.elitepvpers.com/forum/clientscript/login/main.min.js?v=1.1"); a("script#loginjsinc").remove(); })(jQuery);
+// -->
+  </script>
+  <meta content="noindex,follow" name="robots"/>
+  <title>
+   elitepvpers - Announcements in Forum : Main
+  </title>
+  <style type="text/css">
+   span.sortarrow{position:absolute;}span.sortarrow img{border:0;}a.sortheader{text-decoration:none;display:block;width:100%;}
+  </style>
+  <script type="text/javascript">
+   var IMGDIR_BUTTON = "images/elitepvpers/buttons";
+  </script>
+  <script async="async" src="http://www.elitepvpers.com/forum/clientscript/sorttable.js" type="text/javascript">
+  </script>
+ </head>
+ <body>
+  <script type="text/javascript">
+   if (typeof(tapatalkDetect) == "function") tapatalkDetect()
+  </script>
+  <div id="fb-root">
+  </div>
+  <script>
+   window.fbAsyncInit = function() {
+    FB.init({
+      appId  : '131387333558417',
+      status : true, // check login status
+      cookie : true, // enable cookies to allow the server to access the session
+      xfbml  : true  // parse XFBML
+    });
+  };
+
+  (function() {
+    var e = document.createElement('script');
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
+  }());
+  </script>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody>
+    <tr>
+     <td id="userbarbg">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" width="990">
+       <tbody>
+        <tr>
+         <td id="userbaraxe">
+          <a href="http://www.elitepvpers.com/forum/">
+           <img alt="" height="28" src="http://www.elitepvpers.com/images/userbaraxe.png" width="50"/>
+          </a>
+         </td>
+         <td id="userbar">
+          <form action="http://www.elitepvpers.com/forum/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+           <script src="http://www.elitepvpers.com/forum/clientscript/vbulletin_md5.js?v=388b3" type="text/javascript">
+           </script>
+           <label for="navbar_username">
+            User Name:
+           </label>
+           <input accesskey="u" id="navbar_username" name="vb_login_username" onfocus="if (this.value == 'User Name') this.value = '';" size="15" tabindex="96" type="text" value="User Name"/>
+           <label for="navbar_password">
+            Password:
+           </label>
+           <input id="navbar_password" name="vb_login_password" size="15" tabindex="97" type="password"/>
+           <label for="cb_cookieuser_navbar">
+            <input accesskey="c" checked="checked" id="cb_cookieuser_navbar" name="cookieuser" tabindex="98" type="checkbox" value="1"/>
+            Remember Me?
+           </label>
+           <input accesskey="s" tabindex="99" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." type="submit" value="Log in"/>
+           <input name="s" type="hidden" value="270684d406f921dd6564e804a0a8004d"/>
+           <input name="securitytoken" type="hidden" value="guest"/>
+           <input name="do" type="hidden" value="login"/>
+           <input name="vb_login_md5password" type="hidden"/>
+           <input name="vb_login_md5password_utf" type="hidden"/>
+           Not a member yet?
+           <a href="http://www.elitepvpers.com/forum/register.php" rel="nofollow">
+            Register for your free account!
+           </a>
+          </form>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" width="990">
+   <tbody>
+    <tr>
+     <td id="aboveheader">
+      <div style="position:relative">
+       <div style="position: absolute; top: 29px; left: 100%; padding-left: 4px">
+        <div id="div-gpt-ad-1392303584193-7">
+         <script type="text/javascript">
+          googletag.display('div-gpt-ad-1392303584193-7');
+         </script>
+        </div>
+       </div>
+      </div>
+      <br/>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+       <tbody>
+        <tr>
+         <td align="left">
+          <img alt="" height="10" src="http://www.elitepvpers.com/images/logo_shield_new.png" width="305"/>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+           <tbody>
+            <tr>
+             <td width="305">
+              <a href="http://www.elitepvpers.com/forum/">
+               <img alt="" height="63" src="http://www.elitepvpers.com/images/logo.png" width="305"/>
+              </a>
+             </td>
+             <td class="headerbg">
+             </td>
+             <td align="right" class="headerbg">
+              <form action="http://www.elitepvpers.com/search/" id="searchform" method="get" name="searchform">
+               <div class="searchbox">
+                <table border="0" cellpadding="0" cellspacing="0">
+                 <tbody>
+                  <tr>
+                   <td>
+                    <input name="cx" type="hidden" value="partner-pub-2662858641455484:8648036138"/>
+                    <input name="cof" type="hidden" value="FORID:9"/>
+                    <input name="ie" type="hidden" value="UTF-8"/>
+                    <input class="searchinput" name="q" size="31" type="text"/>
+                   </td>
+                   <td>
+                    <input class="searchbtn" name="sa" type="submit" value=""/>
+                   </td>
+                  </tr>
+                 </tbody>
+                </table>
+               </div>
+              </form>
+              <script type="text/javascript">
+               (function () {
+			    var f = document.getElementById('searchform');
+			    if (f && f.q) {
+			        var q = f.q;
+			        var l = location;
+			        var b = function () {
+			            if (q.value == '') {
+			                q.style.background = '#e9e9e9 url(http://www.elitepvpers.com/images/inputbox_google.gif)';
+			            }
+			        };
+			        var f = function () {
+			            q.style.background = '#e9e9e9 url(http://www.elitepvpers.com/images/inputbox.gif)';
+			        };
+			        q.style.background = '#e9e9e9 url(http://www.elitepvpers.com/images/inputbox.gif)';
+			        q.onfocus = f;
+			        q.onblur = b;
+			        if (!/[&?]q=[^&]/.test(l.search)) {
+			            b();
+			        }
+			    }
+			})();
+              </script>
+             </td>
+             <td align="right" width="7">
+              <img alt="" height="63" src="http://www.elitepvpers.com/images/header_end.png" width="7"/>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </td>
+        </tr>
+        <tr>
+         <td id="navbg">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+           <tbody>
+            <tr>
+             <td id="navstart">
+             </td>
+             <td>
+              <ul class="dropdown" id="nav">
+               <li>
+                <a href="http://www.elitepvpers.com/">
+                 Home
+                </a>
+               </li>
+               <li id="selected">
+                <a href="http://www.elitepvpers.com/forum/">
+                 Forum
+                </a>
+               </li>
+               <li>
+                <a href="http://www.elitepvpers.com/games/">
+                 Games
+                </a>
+               </li>
+               <li class="subnav">
+                Shop
+                <img alt="" height="7" src="http://www.elitepvpers.com/images/arrv_white.gif" width="7"/>
+                <ul>
+                 <li>
+                  <a href="http://www.epvpstore.com/" rel="nofollow">
+                   Gold &amp; Gamekeys
+                  </a>
+                 </li>
+                 <li>
+                  <a href="http://www.epvpgames.com/" rel="nofollow">
+                   Game Downloads
+                  </a>
+                 </li>
+                 <li>
+                  <a href="http://merchandise.elitepvpers.com/" rel="nofollow" target="_blank">
+                   Merchandise
+                  </a>
+                 </li>
+                </ul>
+               </li>
+               <li>
+                <a href="http://www.elitepvpers.com/theblackmarket/">
+                 The Black Market
+                </a>
+               </li>
+               <li>
+                <a href="http://www.elitepvpers.com/videos/">
+                 Videos
+                </a>
+               </li>
+              </ul>
+             </td>
+             <td align="right" id="langswitch">
+              <a href="http://www.elitepvpers.com/forum/?langid=1" rel="nofollow">
+               <img alt="" height="24" src="http://www.elitepvpers.com/images/us.png" width="24"/>
+              </a>
+              <a href="http://www.elitepvpers.com/forum/?langid=2" rel="nofollow">
+               <img alt="" height="24" src="http://www.elitepvpers.com/images/de.png" width="24"/>
+              </a>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <div style="padding:1px; border-top-width:0px; background-color:#000">
+           <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr align="center">
+              <td class="vbmenu_control">
+               <a href="http://www.elitepvpers.com/forum/register.php" rel="nofollow">
+                Register
+               </a>
+              </td>
+              <td class="vbmenu_control">
+               <a accesskey="5" href="http://www.elitepvpers.com/forum/faq.php" rel="help">
+                FAQ
+               </a>
+              </td>
+              <td class="vbmenu_control">
+               <a accesskey="4" href="http://www.elitepvpers.com/forum/search.php">
+                Search
+               </a>
+              </td>
+              <td class="vbmenu_control">
+               <a accesskey="2" href="http://www.elitepvpers.com/forum/search.php?do=getdaily">
+                Today's Posts
+               </a>
+              </td>
+              <td class="vbmenu_control">
+               <a href="http://www.elitepvpers.com/forum/forumdisplay.php?do=markread" rel="nofollow">
+                Mark Forums Read
+               </a>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td id="contentbg">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+           <tbody>
+            <tr>
+             <td id="contentshadowwhite">
+             </td>
+            </tr>
+            <tr>
+             <td itemscope="" itemtype="http://schema.org/Article">
+              <div style="padding-top:8px">
+              </div>
+              <div align="center">
+               <div class="page" style="width:100%; text-align:left">
+                <div align="left" style="padding:0px 10px 0px 10px">
+                 <div align="left" class="vbmenu_popup" id="vbbloglinks_menu" style="display:none;margin-top:3px">
+                  <table border="0" cellpadding="4" cellspacing="1">
+                   <tbody>
+                    <tr>
+                     <td class="thead">
+                      <a href="http://www.elitepvpers.com/forum/blogs/">
+                       Blogs
+                      </a>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td class="vbmenu_option">
+                      <a href="http://www.elitepvpers.com/forum/blogs/recent-entries/">
+                       Recent Entries
+                      </a>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td class="vbmenu_option">
+                      <a href="http://www.elitepvpers.com/forum/blogs/best-entries/">
+                       Best Entries
+                      </a>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td class="vbmenu_option">
+                      <a href="http://www.elitepvpers.com/forum/blogs/best-blogs/">
+                       Best Blogs
+                      </a>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td class="vbmenu_option">
+                      <a href="http://www.elitepvpers.com/forum/blogs/all/">
+                       Blog List
+                      </a>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td class="vbmenu_option">
+                      <a href="http://www.elitepvpers.com/forum/blog_search.php?do=search" rel="nofollow">
+                       Search Blogs
+                      </a>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                 </div>
+                 <div style="float:left;width:650px">
+                  <table border="0" cellpadding="0" cellspacing="0">
+                   <tbody>
+                    <tr valign="bottom">
+                     <td>
+                      <a href="http://www.elitepvpers.com/forum/main/announcement-attention-achtung-problem-multiaccounting-acc-trading.html?langid=1#" onclick="history.back(1); return false;">
+                       <img alt="Go Back" border="0" src="http://www.elitepvpers.com/forum/images/misc/navbits_start.gif"/>
+                      </a>
+                     </td>
+                     <td>
+                     </td>
+                     <td width="100%">
+                      <span class="navbar">
+                       <a accesskey="1" href="http://www.elitepvpers.com/forum/">
+                        <span itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+                         <span itemprop="name">
+                          elitepvpers
+                         </span>
+                        </span>
+                       </a>
+                      </span>
+                      <span class="navbar">
+                       &gt;
+                       <a href="http://www.elitepvpers.com/forum/announcement.php?a=113" rel="nofollow">
+                        <span itemprop="articleSection">
+                         Announcements
+                        </span>
+                       </a>
+                      </span>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td class="navbar" colspan="3" style="font-size:10pt; padding-top:1px">
+                      <a href="http://www.elitepvpers.com/forum/main/announcement-attention-achtung-problem-multiaccounting-acc-trading.html">
+                       <img alt="Reload this Page" border="0" class="inlineimg" height="15" src="http://www.elitepvpers.com/forum/images/misc/navbits_finallink_ltr.gif" width="30"/>
+                      </a>
+                      <strong>
+                       [ATTENTION/ACHTUNG] Problem: Multiaccounting/Acc.-Trading
+                      </strong>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                 </div>
+                 <div class="smallfont" style="float:right">
+                  You last visited: Today at
+                  <span class="time">
+                   02:38
+                  </span>
+                 </div>
+                 <div class="clear">
+                 </div>
+                 <br/>
+                 <div id="tickerwrapper">
+                  <div class="cwtitle1h">
+                  </div>
+                  <div class="ticker">
+                   <div class="tickersocial">
+                    <div style="float:left;padding-right:2px">
+                     <g:plusone annotation="none" href="https://plus.google.com/105125205325056351077" size="medium">
+                     </g:plusone>
+                     <script type="text/javascript">
+                      window.___gcfg = {
+					
+			        lang: 'en-US'
+					
+			      };
+				
+				  (function() {
+				    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				    po.src = 'https://apis.google.com/js/plusone.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  })();
+                     </script>
+                    </div>
+                    <div style="float:left;padding-right:2px">
+                     <a class="twitter-follow-button" data-lang="en" data-show-count="false" data-show-screen-name="false" href="https://twitter.com/elitepvpers" rel="nofollow">
+                      Follow
+                     </a>
+                     <script>
+                      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                     </script>
+                    </div>
+                    <div style="float:left">
+                     <fb:like font="verdana" height="20" href="http://www.facebook.com/elitepvpers" layout="button_count" show_faces="false" style="border:none; overflow:hidden; width:150px; height:20px;" width="150">
+                     </fb:like>
+                    </div>
+                   </div>
+                   <div id="tickertoggle" style="float:right">
+                    <img alt="" height="10" src="http://www.elitepvpers.com/images/collapse.gif" width="10"/>
+                   </div>
+                   <ul class="tickermessages" id="tickermessages">
+                    <li class="dyk">
+                     <img alt="" height="18" src="http://www.elitepvpers.com/images/lightbulb.png" width="13"/>
+                     <div>
+                      Please register to post and access all features, it's quick, easy and FREE!
+                     </div>
+                    </li>
+                   </ul>
+                  </div>
+                  <div class="cwtitle1f">
+                  </div>
+                 </div>
+                 <br/>
+                 <script>
+                  var tickcount = 0;
+var tickitems = 0;
+var tickerpause = false;
+
+function tick() {
+	if ($('#tickerwrapper').css("width") == "285px") return;
+	if (tickerpause) return;
+	if (tickcount >= 1 && tickitems <= 1) return;
+	tickcount++;
+
+	$('#tickermessages li:first').animate({"opacity":0}).slideUp( function () { $(this).appendTo($('#tickermessages')).animate({"opacity":1}).slideDown(); });
+
+	if (tickcount == 2) {
+		$('.dyk').remove();
+	}
+}
+
+$('#tickermessages').hover(function(){ tickerpause = true; }, function(){ tickerpause = false; });
+
+$('#tickertoggle').click(function(){ 
+	if ($('#tickerwrapper').css("width") == "285px") {
+		$("#tickertoggle img").attr("src", "http://www.elitepvpers.com/images/collapse.gif");
+		$('#tickerwrapper').animate({
+			width: "100%"
+		}, 1500, function() {
+			$('#tickermessages').show('slow');
+		});
+    	document.cookie = "tickerdisabled=0;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/;domain=.elitepvpers.com";
+	} else {
+		$("#tickertoggle img").attr("src", "http://www.elitepvpers.com/images/expand.gif");
+		$('#tickermessages').hide('slow');
+		$('#tickerwrapper').animate({
+			width: "285px"
+		}, 1500);
+        var a = new Date;
+        a.setTime(a.getTime() + 31536E7);
+        document.cookie = "tickerdisabled=1;expires=" + a.toUTCString() + ";path=/;domain=.elitepvpers.com"
+	}
+});
+
+$.getJSON('/ajax/ticker.js?en', function(data) {
+	if (!data) return;
+	
+	tickitems = data.length;
+	
+	var items = [];
+	var avatar = '';
+	
+	$.each(data, function(key, val) {
+		if (val.avatarurl) {
+			avatar = '<img src="http://www.elitepvpers.com/forum/' + val.avatarurl + '" alt="" /> ';
+		} else {
+			avatar = '<img src="http://www.elitepvpers.com/images/clear.gif" width="1" height="20" alt="" />';
+		}
+		items += '<li>' + avatar + '<div><span class="smallfont"><a href="' + val.memberurl + '" rel="nofollow">' + val.postusername + '</a>:</span> <strong><a href="' + val.threadurl + '">' + val.title + '</a></strong> <span class="smallfont">(<a href="' + val.forumurl + '">' + val.forumtitle + '</a></span>)</div><img src="http://www.elitepvpers.com/images/ticker/hot' + val.hotnesslevel + '.png" width="16" height="20" alt="" /></li>';
+	});
+
+	$('#tickermessages').append(items);
+	setInterval(function(){ tick () }, 8000), tickerpause = false;
+});
+                 </script>
+                 <div class="cw1h">
+                 </div>
+                 <div class="cwheadad">
+                 </div>
+                 <div class="cwcontentad">
+                  <center>
+                   <div id="div-gpt-ad-1392303584193-0" style="width:728px; height:90px;">
+                    <script type="text/javascript">
+                     googletag.display('div-gpt-ad-1392303584193-0');
+                    </script>
+                   </div>
+                  </center>
+                 </div>
+                 <br/>
+                 <div class="cw1hforum">
+                 </div>
+                 <table align="center" border="0" cellpadding="6" cellspacing="0" class="tborder" style="border-bottom-width: 0px" width="100%">
+                  <tbody>
+                   <tr>
+                    <td class="tcat">
+                     <span class="smallfont" style="float:right">
+                      <a href="http://www.elitepvpers.com/forum/main/announcements.html">
+                       View All Announcements
+                      </a>
+                      (3)
+                     </span>
+                     Global Announcement
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </div>
+               </div>
+              </div>
+              <div id="posts">
+               <div align="center">
+                <div class="page" style="width:100%; text-align:left">
+                 <div align="left" style="padding:0px 10px 0px 10px">
+                  <div id="edit113" style="padding:0px 0px 6px 0px">
+                   <table align="center" border="0" cellpadding="6" cellspacing="0" class="tborder" id="post113" width="100%">
+                    <tbody>
+                     <tr>
+                      <td class="thead" colspan="2" style="font-weight:normal; border: 1px solid #EDEDED">
+                       <img alt="" border="0" class="inlineimg" height="11" src="http://www.elitepvpers.com/forum/images/elitepvpers/statusicon/post_old.gif" width="10"/>
+                       01/31/2011 until 03/03/2050
+                      </td>
+                     </tr>
+                     <tr valign="top">
+                      <td class="alt2" style="border: 1px solid #EDEDED; border-top: 0px; border-bottom: 0px" width="175">
+                       <div id="postmenu_113" style="float:left">
+                        <a class="bigusername" href="http://www.elitepvpers.com/forum/members/517481-john-dread.html">
+                         <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                          <span itemprop="name">
+                           <span style="color:red">
+                            John Dread
+                           </span>
+                          </span>
+                         </span>
+                        </a>
+                        <script type="text/javascript">
+                         vbmenu_register("postmenu_113", true);
+                        </script>
+                       </div>
+                       <img alt="" class="staricon" src="http://www.elitepvpers.com/forum/images/staricons/star35.gif"/>
+                       <div style="clear:left">
+                       </div>
+                       <div class="smallfont">
+                        Tu fui, ego eris.
+                       </div>
+                       <div class="smallfont" style="padding-top:5px;">
+                        <img alt="" border="" src="http://www.elitepvpers.com/forum/images/teamicons/relaunch/coadmin.png"/>
+                       </div>
+                       <div class="smallfont">
+                        <br/>
+                        <div class="postbar">
+                         Join Date: Nov 2007
+                        </div>
+                        <div class="postbar">
+                         Posts: 10,904
+                        </div>
+                        <div class="postbar">
+                         Received Thanks: 21,120
+                        </div>
+                       </div>
+                      </td>
+                      <td class="alt1" id="td_post_113" style="border-right: 1px solid #EDEDED">
+                       <div class="smallfont">
+                        <strong>
+                         [ATTENTION/ACHTUNG] Problem: Multiaccounting/Acc.-Trading
+                        </strong>
+                       </div>
+                       <br/>
+                       <div id="post_message_113" itemprop="text">
+                        Dear members!
+                        <br/>
+                        <br/>
+                        Due to the increasing rate of people who create multiple accounts or trade their accounts here in the forum recently, we decided to notify our members that this kind of behaviour will never be tolerated on elitepvpers!
+                        <br/>
+                        <br/>
+                        <u>
+                         What exactly is a multiaccount?
+                        </u>
+                        <br/>
+                        <br/>
+                        This is how we define a multiaccount:
+                        <br/>
+                        As soon as more than one account is active (i.e. not banned; it doesn't matter, if you are using it or not) at the very same IP/Computer we consider them multiaccounts. We prefer that only one account per router/computer is active but if you live together with someone who definitely needs an account for his own, you must notify an admin about it and provide proof that there are actually two (or more) people using the accounts. Valid proofs are any documents (IDs etc) of both users which you scan and send the picture to an admin. That's the only way you can avoid punishment. Also, if you are temporarily banned, you are NOT allowed to create another account!
+                        <br/>
+                        <br/>
+                        <u>
+                         What about account trading?
+                        </u>
+                        <br/>
+                        <br/>
+                        It's obvious isn't it? elitepvpers is NOT a game! It is a forum and identities are bound to one and always the same person! Again: Don't mix up this forum with an online game!
+                        <br/>
+                        <br/>
+                        <u>
+                         What are the consequences then?
+                        </u>
+                        <br/>
+                        <br/>
+                        In fact, it's stated in the rules. As soon as we detect that you use an account that you did not register or that you use more than one account without notifying an admin, we BAN you immediately and all accounts involved. Only in very harmless situations we make exceptions and only give a permanent infraction. We have our ways (yes, multiple ways) to detect such frauds, so please don't try to challenge us.
+                        <br/>
+                        <br/>
+                        Regards,
+                        <br/>
+                        John Dread
+                        <br/>
+                        <br/>
+                        <b>
+                         Deutsch:
+                        </b>
+                        <br/>
+                        <br/>
+                        Liebe Mitglieder!
+                        <br/>
+                        <br/>
+                        Aufgrund der immer häufiger auftretenden Fälle von Multiaccounting und Account-Trading, haben wir uns entschieden die Mitglieder nochmal speziell darauf hinzuweisen, dass wir ein solches Verhalten niemals tolerieren werden!
+                        <br/>
+                        <br/>
+                        <u>
+                         Was genau ist ein Multiaccount?
+                        </u>
+                        <br/>
+                        <br/>
+                        So definieren wir einen Multiaccount:
+                        <br/>
+                        Sobald mehr als 1 Account von der selben IP/dem selben Computer aktiv ist (d.h. nicht gebannt; es spielt keine Rolle, ob ihr ihn nutzt oder nicht), betrachten wir alle betroffenen Accounts als Multiaccounts. Wir bevorzugen, dass pro Router/Computer nur ein Account bei uns aktiv ist; wenn ihr mit einer oder mehreren Personen zusammenlebt und wirklich für jeden ein eigener Account nötig ist, dann seid ihr verpflichtet diese Accounts bei einem Admin zu melden und Beweise vorzulegen, die belegen, dass mehrere Personen hinter den Accounts stecken. Das geht indem ihr irgendeine Art Dokument von allen Personen, die einen Account bei uns haben (Personalausweis/Schülerausweis etc) scanned und das Bild einem Admin übermittelt. Nur so könnt ihr Bestrafung entgehen! Außerdem: Euch ist es NICHT erlaubt einen neuen Account zu registrieren, während ihr temporär gebannt seid!
+                        <br/>
+                        <br/>
+                        <u>
+                         Was ist mit Account-Trading?
+                        </u>
+                        <br/>
+                        <br/>
+                        Das sollte klar sein, nicht wahr? elitepvpers ist KEIN Spiel! Es ist ein Forum und Identitäten sind an eine und immer die selbe Person gebunden! Nochmal: Verwechselt das Forum NICHT mit einem Online-Game!
+                        <br/>
+                        <br/>
+                        <u>
+                         Was sind die Konsequenzen?
+                        </u>
+                        <br/>
+                        <br/>
+                        Tatsächlich steht das natürlich bereits in den Regeln. Sobald wir feststellen, dass ihr einen Account nutzt, den ihr nicht registriert habt oder mehrere Accounts nutzt, erhalten alle involvierten Accounts einen sofortigen BAN! Nur in wirklich harmlosen Fällen machen wir eine Ausnahme und ahnden nur mit einer permanenten Verwarnung! Wir haben Mittel und Wege (ja, mehrere) diese Betrugsfälle festzustellen, also bitte fordert uns nicht heraus.
+                        <br/>
+                        <br/>
+                        <br/>
+                        Beste Grüße,
+                        <br/>
+                        John Dread
+                       </div>
+                      </td>
+                     </tr>
+                     <tr>
+                      <td class="alt2" style="border: 1px solid #EDEDED; border-top: 0px">
+                       <img alt="John Dread is offline" border="0" class="inlineimg" height="15" src="http://www.elitepvpers.com/forum/images/elitepvpers/statusicon/user_offline.gif" width="15"/>
+                      </td>
+                      <td align="right" class="alt1" style="border: 1px solid #EDEDED; border-left: 0px; border-top: 0px">
+                      </td>
+                     </tr>
+                    </tbody>
+                   </table>
+                   <div class="vbmenu_popup" id="postmenu_113_menu" style="display:none">
+                    <table border="0" cellpadding="4" cellspacing="1">
+                     <tbody>
+                      <tr>
+                       <td class="thead">
+                        John Dread
+                       </td>
+                      </tr>
+                      <tr>
+                       <td class="vbmenu_option">
+                        <a href="http://www.elitepvpers.com/forum/members/517481-john-dread.html">
+                         View Public Profile
+                        </a>
+                       </td>
+                      </tr>
+                      <tr>
+                       <td class="vbmenu_option">
+                        <a href="http://www.elitepvpers.com/forum/private.php?do=newpm&amp;u=517481" rel="nofollow">
+                         Send a private message to John Dread
+                        </a>
+                       </td>
+                      </tr>
+                      <tr>
+                       <td class="vbmenu_option">
+                        <a href="http://www.elitepvpers.com/forum/search.php?do=finduser&amp;u=517481" rel="nofollow">
+                         Find More Posts by John Dread
+                        </a>
+                       </td>
+                      </tr>
+                      <tr>
+                       <td class="vbmenu_option">
+                        <a href="http://www.elitepvpers.com/forum/search.php?do=finduser&amp;u=517481&amp;starteronly=1" rel="nofollow">
+                         Find More Threads by John Dread
+                        </a>
+                       </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div align="center">
+               <div class="page" style="width:100%; text-align:left">
+                <div align="left" style="padding:0px 10px 0px 10px">
+                 <br/>
+                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tbody>
+                   <tr>
+                    <td width="100%">
+                    </td>
+                    <td>
+                     <div class="smallfont" style="text-align:left; white-space:nowrap">
+                      <form action="http://www.elitepvpers.com/forum/forumdisplay.php" method="get">
+                       <input name="s" type="hidden" value="270684d406f921dd6564e804a0a8004d"/>
+                       <input name="daysprune" type="hidden" value=""/>
+                       <strong>
+                        Forum Jump
+                       </strong>
+                       <br/>
+                       <select name="f" onchange="this.form.submit();">
+                        <optgroup label="Site Areas">
+                         <option value="cp">
+                          User Control Panel
+                         </option>
+                         <option value="pm">
+                          Private Messages
+                         </option>
+                         <option value="subs">
+                          Subscriptions
+                         </option>
+                         <option value="wol">
+                          Who's Online
+                         </option>
+                         <option value="search">
+                          Search Forums
+                         </option>
+                         <option value="home">
+                          Forums Home
+                         </option>
+                        </optgroup>
+                        <optgroup label="Forums">
+                         <option class="fjdpth0" value="633">
+                          News
+                         </option>
+                         <option class="fjdpth1" value="205">
+                          e*pvp News
+                         </option>
+                         <option class="fjdpth2" value="534">
+                          e*pvp News - EN
+                         </option>
+                         <option class="fjdpth2" value="533">
+                          e*pvp News - DE
+                         </option>
+                         <option class="fjdpth2" value="519">
+                          e*pvp Broadcasts
+                         </option>
+                         <option class="fjdpth2" value="703">
+                          e*pvp Let's Plays
+                         </option>
+                         <option class="fjdpth2" value="527">
+                          e*pvp Podcasts
+                         </option>
+                         <option class="fjdpth3" value="592">
+                          e*pvp Podcasts - EN
+                         </option>
+                         <option class="fjdpth3" value="576">
+                          e*pvp Podcasts - DE
+                         </option>
+                         <option class="fjdpth1" value="547">
+                          Gaming News
+                         </option>
+                         <option class="fjdpth2" value="524">
+                          Gaming News - EN
+                         </option>
+                         <option class="fjdpth2" value="522">
+                          Gaming News - DE
+                         </option>
+                         <option class="fjdpth2" value="238">
+                          User Submitted News
+                         </option>
+                         <option class="fjdpth2" value="706">
+                          Game Reviews
+                         </option>
+                         <option class="fjdpth2" value="718">
+                          Tech Reviews
+                         </option>
+                         <option class="fjdpth0" value="636">
+                          General
+                         </option>
+                         <option class="fjsel" selected="selected" value="206">
+                          Main
+                         </option>
+                         <option class="fjdpth1" value="749">
+                          Suggestions
+                         </option>
+                         <option class="fjdpth1" value="359">
+                          Say Hello
+                         </option>
+                         <option class="fjdpth1" value="210">
+                          Joining e*pvp
+                         </option>
+                         <option class="fjdpth0" value="635">
+                          General Gaming
+                         </option>
+                         <option class="fjdpth1" value="225">
+                          General Gaming Discussion
+                         </option>
+                         <option class="fjdpth2" value="731">
+                          General Gaming Releases
+                         </option>
+                         <option class="fjdpth2" value="267">
+                          Private Server - Discussions / Questions
+                         </option>
+                         <option class="fjdpth3" value="822">
+                          Private Server Advertising
+                         </option>
+                         <option class="fjdpth1" value="341">
+                          Consoles
+                         </option>
+                         <option class="fjdpth2" value="793">
+                          Consoles Black Market
+                         </option>
+                         <option class="fjdpth1" value="300">
+                          Foreign Games
+                         </option>
+                         <option class="fjdpth0" value="762">
+                          New Arrivals
+                         </option>
+                         <option class="fjdpth1" value="784">
+                          ArcheAge
+                         </option>
+                         <option class="fjdpth2" value="794">
+                          ArcheAge Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="786">
+                          ArcheAge Black Market
+                         </option>
+                         <option class="fjdpth1" value="763">
+                          EverQuest Next
+                         </option>
+                         <option class="fjdpth1" value="812">
+                          H1Z1
+                         </option>
+                         <option class="fjdpth1" value="787">
+                          Heroes of the Storm
+                         </option>
+                         <option class="fjdpth2" value="789">
+                          Heroes of the Storm Black Market
+                         </option>
+                         <option class="fjdpth1" value="816">
+                          Smite
+                         </option>
+                         <option class="fjdpth2" value="817">
+                          Smite Black Market
+                         </option>
+                         <option class="fjdpth0" value="188">
+                          World of Warcraft
+                         </option>
+                         <option class="fjdpth1" value="250">
+                          WoW Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="266">
+                          WoW Ask the Experts
+                         </option>
+                         <option class="fjdpth2" value="757">
+                          WoW Recruitment Center
+                         </option>
+                         <option class="fjdpth1" value="554">
+                          WoW Black Market
+                         </option>
+                         <option class="fjdpth1" value="226">
+                          WoW Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth1" value="249">
+                          WoW Exploits, Hacks, Tools &amp; Macros
+                         </option>
+                         <option class="fjdpth1" value="339">
+                          WoW Bots
+                         </option>
+                         <option class="fjdpth1" value="336">
+                          WoW Modelchange Support
+                         </option>
+                         <option class="fjdpth2" value="387">
+                          WoW Modelchange Tools &amp; Guides
+                         </option>
+                         <option class="fjdpth2" value="407">
+                          WoW Modelchange Requests
+                         </option>
+                         <option class="fjdpth1" value="274">
+                          WoW Addons
+                         </option>
+                         <option class="fjdpth1" value="548">
+                          WoW Private Server
+                         </option>
+                         <option class="fjdpth2" value="393">
+                          WoW PServer Exploits, Hacks &amp; Tools
+                         </option>
+                         <option class="fjdpth2" value="307">
+                          WoW PServer Hosting
+                         </option>
+                         <option class="fjdpth2" value="741">
+                          WoW PServer Advertising
+                         </option>
+                         <option class="fjdpth0" value="717">
+                          Diablo 3
+                         </option>
+                         <option class="fjdpth1" value="445">
+                          Diablo 3 Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth1" value="714">
+                          Diablo 3 Black Market
+                         </option>
+                         <option class="fjdpth1" value="715">
+                          Diablo 3 Guides &amp; Strategies
+                         </option>
+                         <option class="fjdpth1" value="716">
+                          Diablo 3 Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth0" value="753">
+                          League of Legends
+                         </option>
+                         <option class="fjdpth1" value="607">
+                          League of Legends Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="710">
+                          League of Legends Ask the Experts
+                         </option>
+                         <option class="fjdpth1" value="644">
+                          League of Legends Black Market
+                         </option>
+                         <option class="fjdpth1" value="648">
+                          League of Legends Guides &amp; Strategies
+                         </option>
+                         <option class="fjdpth1" value="750">
+                          League of Legends Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth0" value="724">
+                          Guild Wars 2
+                         </option>
+                         <option class="fjdpth1" value="622">
+                          GW2 Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth1" value="728">
+                          GW2 Black Market
+                         </option>
+                         <option class="fjdpth1" value="725">
+                          GW2 Guides &amp; Strategies
+                         </option>
+                         <option class="fjdpth1" value="726">
+                          GW2 Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth0" value="536">
+                          Aion
+                         </option>
+                         <option class="fjdpth1" value="382">
+                          Aion Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth1" value="555">
+                          Aion Black Market
+                         </option>
+                         <option class="fjdpth1" value="499">
+                          Aion Guides &amp; Strategies
+                         </option>
+                         <option class="fjdpth1" value="515">
+                          Aion Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth1" value="589">
+                          Aion Private Server
+                         </option>
+                         <option class="fjdpth0" value="700">
+                          Star Wars: The Old Republic
+                         </option>
+                         <option class="fjdpth1" value="624">
+                          SWTOR Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth1" value="695">
+                          SWTOR Black Market
+                         </option>
+                         <option class="fjdpth1" value="701">
+                          SWTOR Guides &amp; Strategies
+                         </option>
+                         <option class="fjdpth1" value="702">
+                          SWTOR Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth0" value="195">
+                          Conquer Online 2
+                         </option>
+                         <option class="fjdpth1" value="246">
+                          CO2 Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="449">
+                          CO2 Programming
+                         </option>
+                         <option class="fjdpth1" value="556">
+                          CO2 Black Market
+                         </option>
+                         <option class="fjdpth1" value="299">
+                          CO2 Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth2" value="349">
+                          CO2 Weapon, Armor, Effects &amp; Interface edits
+                         </option>
+                         <option class="fjdpth1" value="277">
+                          CO2 Exploits, Hacks &amp; Tools
+                         </option>
+                         <option class="fjdpth1" value="317">
+                          CO2 Bots &amp; Macros
+                         </option>
+                         <option class="fjdpth1" value="450">
+                          CO2 PServer - Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="578">
+                          CO2 PServer Guides &amp; Releases
+                         </option>
+                         <option class="fjdpth2" value="579">
+                          CO2 PServer Advertising
+                         </option>
+                         <option class="fjdpth0" value="202">
+                          Silkroad Online
+                         </option>
+                         <option class="fjdpth1" value="312">
+                          SRO Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="383">
+                          SRO Ask the Experts
+                         </option>
+                         <option class="fjdpth1" value="557">
+                          SRO Black Market
+                         </option>
+                         <option class="fjdpth1" value="344">
+                          SRO Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth1" value="335">
+                          SRO Exploits/Hacks/Bots/Guides
+                         </option>
+                         <option class="fjdpth1" value="632">
+                          SRO Coding Corner
+                         </option>
+                         <option class="fjdpth1" value="398">
+                          Private SRO Main Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="399">
+                          Private SRO Exploits/Hacks/Bots/Guides
+                         </option>
+                         <option class="fjdpth2" value="420">
+                          Private SRO Ask the Experts
+                         </option>
+                         <option class="fjdpth2" value="639">
+                          Private SRO Advertising
+                         </option>
+                         <option class="fjdpth1" value="538">
+                          Foreign SRO - Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="539">
+                          Foreign SRO Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth0" value="400">
+                          Cabal Online
+                         </option>
+                         <option class="fjdpth1" value="330">
+                          Cabal Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="465">
+                          Cabal PServer - Discussions / Questions
+                         </option>
+                         <option class="fjdpth1" value="558">
+                          Cabal Black Market
+                         </option>
+                         <option class="fjdpth1" value="402">
+                          Cabal Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth1" value="401">
+                          Cabal Hacks, Bots, Cheats, Exploits &amp; Macros
+                         </option>
+                         <option class="fjdpth0" value="403">
+                          Metin2
+                         </option>
+                         <option class="fjdpth1" value="366">
+                          Metin2 Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="485">
+                          Metin2 Foreign - Discussions / Questions
+                         </option>
+                         <option class="fjdpth1" value="560">
+                          Metin2 Black Market
+                         </option>
+                         <option class="fjdpth1" value="404">
+                          Metin2 Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth1" value="405">
+                          Metin2 Hacks, Bots, Cheats, Exploits &amp; Macros
+                         </option>
+                         <option class="fjdpth1" value="447">
+                          Metin2 PServer - Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="545">
+                          Metin2 PServer Guides &amp; Strategies
+                         </option>
+                         <option class="fjdpth2" value="814">
+                          Metin2 PServer Designs, Websites &amp; Scripts
+                         </option>
+                         <option class="fjdpth2" value="617">
+                          Metin2 PServer News
+                         </option>
+                         <option class="fjdpth0" value="476">
+                          Flyff (Fly For Fun)
+                         </option>
+                         <option class="fjdpth1" value="322">
+                          Flyff Main - Discussions / Questions
+                         </option>
+                         <option class="fjdpth1" value="583">
+                          Flyff Black Market
+                         </option>
+                         <option class="fjdpth1" value="477">
+                          Flyff Hacks, Bots, Cheats, Exploits &amp; Macros
+                         </option>
+                         <option class="fjdpth1" value="448">
+                          Flyff PServer - Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="707">
+                          Flyff PServer Guides &amp; Releases
+                         </option>
+                         <option class="fjdpth2" value="475">
+                          Flyff PServer Advertising
+                         </option>
+                         <option class="fjdpth0" value="367">
+                          The Black Market
+                         </option>
+                         <option class="fjdpth1" value="580">
+                          elite*gold Trading
+                         </option>
+                         <option class="fjdpth1" value="368">
+                          Trading
+                         </option>
+                         <option class="fjdpth1" value="800">
+                          Shooter Trading
+                         </option>
+                         <option class="fjdpth2" value="681">
+                          Combat Arms Trading
+                         </option>
+                         <option class="fjdpth2" value="790">
+                          Counter-Strike Trading
+                         </option>
+                         <option class="fjdpth2" value="610">
+                          CrossFire Trading
+                         </option>
+                         <option class="fjdpth2" value="737">
+                          DayZ Trading
+                         </option>
+                         <option class="fjdpth2" value="738">
+                          Infestation Trading
+                         </option>
+                         <option class="fjdpth2" value="776">
+                          Rust Trading
+                         </option>
+                         <option class="fjdpth2" value="641">
+                          S4 League Trading
+                         </option>
+                         <option class="fjdpth2" value="595">
+                          WarRock Trading
+                         </option>
+                         <option class="fjdpth1" value="801">
+                          MMORPG Trading
+                         </option>
+                         <option class="fjdpth2" value="620">
+                          4Story Trading
+                         </option>
+                         <option class="fjdpth2" value="569">
+                          9Dragons Trading
+                         </option>
+                         <option class="fjdpth2" value="552">
+                          Aion Trading
+                         </option>
+                         <option class="fjdpth2" value="785">
+                          ArcheAge Trading
+                         </option>
+                         <option class="fjdpth2" value="455">
+                          Archlord Trading
+                         </option>
+                         <option class="fjdpth2" value="735">
+                          Atlantica Online Trading
+                         </option>
+                         <option class="fjdpth2" value="507">
+                          Cabal Online Trading
+                         </option>
+                         <option class="fjdpth2" value="370">
+                          Conquer Online 2 Trading
+                         </option>
+                         <option class="fjdpth2" value="496">
+                          Dekaron Trading
+                         </option>
+                         <option class="fjdpth2" value="713">
+                          Diablo 3 Trading
+                         </option>
+                         <option class="fjdpth2" value="670">
+                          Dragonica Trading
+                         </option>
+                         <option class="fjdpth2" value="805">
+                          Elsword Trading
+                         </option>
+                         <option class="fjdpth2" value="722">
+                          Eve Online Trading
+                         </option>
+                         <option class="fjdpth2" value="808">
+                          Final Fantasy Trading
+                         </option>
+                         <option class="fjdpth2" value="581">
+                          Fly For Fun Trading
+                         </option>
+                         <option class="fjdpth2" value="727">
+                          Guild Wars 2 Trading
+                         </option>
+                         <option class="fjdpth2" value="494">
+                          Guild Wars Trading
+                         </option>
+                         <option class="fjdpth2" value="590">
+                          Last Chaos Trading
+                         </option>
+                         <option class="fjdpth2" value="470">
+                          Metin2 Trading
+                         </option>
+                         <option class="fjdpth2" value="582">
+                          Nostale Trading
+                         </option>
+                         <option class="fjdpth2" value="743">
+                          Perfect World Trading
+                         </option>
+                         <option class="fjdpth2" value="553">
+                          Rappelz Trading
+                         </option>
+                         <option class="fjdpth2" value="657">
+                          Rift Trading
+                         </option>
+                         <option class="fjdpth2" value="565">
+                          Runescape Trading
+                         </option>
+                         <option class="fjdpth2" value="677">
+                          Shaiya Trading
+                         </option>
+                         <option class="fjdpth2" value="371">
+                          Silkroad Online Trading
+                         </option>
+                         <option class="fjdpth2" value="694">
+                          Star Wars: The Old Republic Trading
+                         </option>
+                         <option class="fjdpth2" value="807">
+                          The Elder Scrolls Online Trading
+                         </option>
+                         <option class="fjdpth2" value="782">
+                          Wildstar Trading
+                         </option>
+                         <option class="fjdpth2" value="369">
+                          World of Warcraft Trading
+                         </option>
+                         <option class="fjdpth1" value="802">
+                          Other Online Games Trading
+                         </option>
+                         <option class="fjdpth2" value="759">
+                          Fifa Trading
+                         </option>
+                         <option class="fjdpth2" value="755">
+                          Grand Theft Auto Trading
+                         </option>
+                         <option class="fjdpth2" value="758">
+                          Hearthstone Trading
+                         </option>
+                         <option class="fjdpth2" value="788">
+                          Heroes of the Storm Trading
+                         </option>
+                         <option class="fjdpth2" value="642">
+                          League of Legends Trading
+                         </option>
+                         <option class="fjdpth2" value="659">
+                          Minecraft Trading
+                         </option>
+                         <option class="fjdpth2" value="815">
+                          Smite Trading
+                         </option>
+                         <option class="fjdpth2" value="803">
+                          World of Tanks Trading
+                         </option>
+                         <option class="fjdpth1" value="567">
+                          Steam Trading
+                         </option>
+                         <option class="fjdpth1" value="704">
+                          Origin Trading
+                         </option>
+                         <option class="fjdpth1" value="797">
+                          Other Trading
+                         </option>
+                         <option class="fjdpth2" value="698">
+                          Artist Trading
+                         </option>
+                         <option class="fjdpth2" value="729">
+                          Coders Trading
+                         </option>
+                         <option class="fjdpth2" value="798">
+                          Crypto Currency Trading
+                         </option>
+                         <option class="fjdpth2" value="795">
+                          Web Host / Server Trading
+                         </option>
+                         <option class="fjdpth1" value="668">
+                          Browsergames Trading
+                         </option>
+                         <option class="fjdpth1" value="820">
+                          Mobile Games Trading
+                         </option>
+                         <option class="fjdpth2" value="796">
+                          Clash of Clans Trading
+                         </option>
+                         <option class="fjdpth1" value="792">
+                          Consoles Trading
+                         </option>
+                         <option class="fjdpth1" value="712">
+                          Freebies
+                         </option>
+                         <option class="fjdpth1" value="606">
+                          Middleman
+                         </option>
+                         <option class="fjdpth0" value="634">
+                          Shooter
+                         </option>
+                         <option class="fjdpth1" value="616">
+                          All Points Bulletin
+                         </option>
+                         <option class="fjdpth1" value="613">
+                          Alliance of Valiant Arms
+                         </option>
+                         <option class="fjdpth1" value="631">
+                          Battlefield
+                         </option>
+                         <option class="fjdpth1" value="630">
+                          Call of Duty
+                         </option>
+                         <option class="fjdpth2" value="686">
+                          Call of Duty Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth1" value="446">
+                          Combat Arms
+                         </option>
+                         <option class="fjdpth2" value="572">
+                          Combat Arms Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="682">
+                          Combat Arms Black Market
+                         </option>
+                         <option class="fjdpth1" value="601">
+                          Counter-Strike
+                         </option>
+                         <option class="fjdpth2" value="605">
+                          Counter-Strike Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="791">
+                          Counter-Strike Black Market
+                         </option>
+                         <option class="fjdpth1" value="529">
+                          CrossFire
+                         </option>
+                         <option class="fjdpth2" value="628">
+                          CrossFire Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="611">
+                          CrossFire Black Market
+                         </option>
+                         <option class="fjdpth1" value="720">
+                          DayZ
+                         </option>
+                         <option class="fjdpth2" value="739">
+                          DayZ Black Market
+                         </option>
+                         <option class="fjdpth1" value="284">
+                          GunZ
+                         </option>
+                         <option class="fjdpth1" value="733">
+                          Infestation
+                         </option>
+                         <option class="fjdpth2" value="740">
+                          Infestation Black Market
+                         </option>
+                         <option class="fjdpth1" value="329">
+                          Planetside
+                         </option>
+                         <option class="fjdpth1" value="775">
+                          Rust
+                         </option>
+                         <option class="fjdpth2" value="779">
+                          Rust Server Advertising
+                         </option>
+                         <option class="fjdpth2" value="777">
+                          Rust Black Market
+                         </option>
+                         <option class="fjdpth1" value="469">
+                          S4 League
+                         </option>
+                         <option class="fjdpth2" value="518">
+                          S4 League Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="643">
+                          S4 League Black Market
+                         </option>
+                         <option class="fjdpth1" value="384">
+                          Soldier Front
+                         </option>
+                         <option class="fjdpth2" value="501">
+                          Soldier Front Philippines
+                         </option>
+                         <option class="fjdpth2" value="498">
+                          Soldier Front Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth1" value="679">
+                          Team Fortress 2
+                         </option>
+                         <option class="fjdpth1" value="332">
+                          WarRock
+                         </option>
+                         <option class="fjdpth2" value="609">
+                          WarRock Guides, Tutorials &amp; Modifications
+                         </option>
+                         <option class="fjdpth2" value="491">
+                          WarRock Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="596">
+                          WarRock Black Market
+                         </option>
+                         <option class="fjdpth1" value="396">
+                          Wolfteam
+                         </option>
+                         <option class="fjdpth0" value="184">
+                          MMORPGs
+                         </option>
+                         <option class="fjdpth1" value="574">
+                          4Story
+                         </option>
+                         <option class="fjdpth2" value="600">
+                          4Story Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="621">
+                          4Story Black Market
+                         </option>
+                         <option class="fjdpth1" value="514">
+                          12Sky2
+                         </option>
+                         <option class="fjdpth2" value="542">
+                          12Sky2 Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth1" value="345">
+                          9Dragons
+                         </option>
+                         <option class="fjdpth2" value="570">
+                          9Dragons Black Market
+                         </option>
+                         <option class="fjdpth1" value="460">
+                          Ace Online / AirRivals
+                         </option>
+                         <option class="fjdpth1" value="618">
+                          Allods
+                         </option>
+                         <option class="fjdpth1" value="338">
+                          Archlord
+                         </option>
+                         <option class="fjdpth2" value="561">
+                          Archlord Black Market
+                         </option>
+                         <option class="fjdpth1" value="573">
+                          Atlantica Online
+                         </option>
+                         <option class="fjdpth2" value="736">
+                          Atlantica Online Black Market
+                         </option>
+                         <option class="fjdpth1" value="778">
+                          Aura Kingdom
+                         </option>
+                         <option class="fjdpth1" value="612">
+                          Battle of the Immortals
+                         </option>
+                         <option class="fjdpth1" value="543">
+                          C9 - Continent of the Ninth
+                         </option>
+                         <option class="fjdpth1" value="521">
+                          Dragonica
+                         </option>
+                         <option class="fjdpth2" value="530">
+                          Dragonica Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="651">
+                          Dragonica Private Server
+                         </option>
+                         <option class="fjdpth2" value="671">
+                          Dragonica Black Market
+                         </option>
+                         <option class="fjdpth1" value="457">
+                          Dekaron
+                         </option>
+                         <option class="fjdpth2" value="458">
+                          Dekaron Exploits, Hacks, Bots, Tools &amp; Macros
+                         </option>
+                         <option class="fjdpth2" value="397">
+                          Dekaron Private Server
+                         </option>
+                         <option class="fjdpth3" value="535">
+                          Dekaron PServer Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="559">
+                          Dekaron Black Market
+                         </option>
+                         <option class="fjdpth1" value="649">
+                          Elsword
+                         </option>
+                         <option class="fjdpth2" value="806">
+                          Elsword Black Market
+                         </option>
+                         <option class="fjdpth1" value="331">
+                          Eudemons Online
+                         </option>
+                         <option class="fjdpth2" value="352">
+                          EO Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth3" value="480">
+                          EO Weapon, Armor, Effects &amp; Interface edits
+                         </option>
+                         <option class="fjdpth2" value="353">
+                          EO Exploits, Hacks, Tools &amp; Macros
+                         </option>
+                         <option class="fjdpth2" value="392">
+                          EO PServer Hosting
+                         </option>
+                         <option class="fjdpth3" value="640">
+                          EO PServer Guides &amp; Releases
+                         </option>
+                         <option class="fjdpth1" value="483">
+                          Eve Online
+                         </option>
+                         <option class="fjdpth2" value="723">
+                          Eve Online Black Market
+                         </option>
+                         <option class="fjdpth1" value="585">
+                          Fantasy Tennis
+                         </option>
+                         <option class="fjdpth1" value="711">
+                          Fiesta Online
+                         </option>
+                         <option class="fjdpth1" value="218">
+                          Final Fantasy XI
+                         </option>
+                         <option class="fjdpth2" value="810">
+                          FFXI Black Market
+                         </option>
+                         <option class="fjdpth2" value="222">
+                          FFXI Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth2" value="219">
+                          FFXI Exploits, Hacks, Bots, Tools &amp; Macros
+                         </option>
+                         <option class="fjdpth1" value="623">
+                          Final Fantasy XIV
+                         </option>
+                         <option class="fjdpth2" value="811">
+                          FFXIV Black Market
+                         </option>
+                         <option class="fjdpth1" value="482">
+                          Florensia
+                         </option>
+                         <option class="fjdpth1" value="663">
+                          Forsaken World
+                         </option>
+                         <option class="fjdpth1" value="493">
+                          Grand Chase
+                         </option>
+                         <option class="fjdpth2" value="505">
+                          Grand Chase Philippines
+                         </option>
+                         <option class="fjdpth2" value="506">
+                          Grand Chase Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth1" value="229">
+                          Guild Wars
+                         </option>
+                         <option class="fjdpth2" value="484">
+                          GW Bot Discussions / Questions
+                         </option>
+                         <option class="fjdpth2" value="562">
+                          GW Black Market
+                         </option>
+                         <option class="fjdpth2" value="327">
+                          GW Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth2" value="328">
+                          GW Exploits, Hacks, Bots, Tools &amp; Macros
+                         </option>
+                         <option class="fjdpth1" value="318">
+                          Kal Online
+                         </option>
+                         <option class="fjdpth2" value="472">
+                          Kal Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth1" value="520">
+                          Last Chaos
+                         </option>
+                         <option class="fjdpth2" value="696">
+                          Last Chaos Private Server
+                         </option>
+                         <option class="fjdpth2" value="591">
+                          Last Chaos Black Market
+                         </option>
+                         <option class="fjdpth1" value="235">
+                          Lineage 2
+                         </option>
+                         <option class="fjdpth2" value="236">
+                          Lin2 Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth2" value="237">
+                          Lin2 Exploits, Hacks, Bots, Tools &amp; Macros
+                         </option>
+                         <option class="fjdpth2" value="308">
+                          Lin2 Private Server
+                         </option>
+                         <option class="fjdpth1" value="346">
+                          Lord of the Rings Online
+                         </option>
+                         <option class="fjdpth2" value="348">
+                          LotRO Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth2" value="347">
+                          LotRO Exploits, Hacks, Tools &amp; Macros
+                         </option>
+                         <option class="fjdpth1" value="492">
+                          Mabinogi
+                         </option>
+                         <option class="fjdpth2" value="586">
+                          Mabinogi Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth1" value="647">
+                          Maestia
+                         </option>
+                         <option class="fjdpth1" value="313">
+                          Maple Story
+                         </option>
+                         <option class="fjdpth1" value="748">
+                          Neverwinter
+                         </option>
+                         <option class="fjdpth1" value="442">
+                          Nostale
+                         </option>
+                         <option class="fjdpth2" value="705">
+                          Nostale Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="584">
+                          Nostale Black Market
+                         </option>
+                         <option class="fjdpth1" value="389">
+                          Perfect World
+                         </option>
+                         <option class="fjdpth2" value="452">
+                          PW Hacks, Bots, Cheats, Exploits
+                         </option>
+                         <option class="fjdpth2" value="744">
+                          PW Black Market
+                         </option>
+                         <option class="fjdpth1" value="234">
+                          Ragnarok Online
+                         </option>
+                         <option class="fjdpth2" value="314">
+                          RO Guides &amp; Templates
+                         </option>
+                         <option class="fjdpth2" value="296">
+                          RO Exploits, Hacks, Bots &amp; Guides
+                         </option>
+                         <option class="fjdpth3" value="309">
+                          RO Bots &amp; Macros
+                         </option>
+                         <option class="fjdpth2" value="306">
+                          Ragnarok Online PServer Hosting
+                         </option>
+                         <option class="fjdpth1" value="395">
+                          Rappelz
+                         </option>
+                         <option class="fjdpth2" value="680">
+                          Rappelz Private Server
+                         </option>
+                         <option class="fjdpth2" value="563">
+                          Rappelz Black Market
+                         </option>
+                         <option class="fjdpth1" value="321">
+                          RF Online
+                         </option>
+                         <option class="fjdpth2" value="411">
+                          RFO Hacks, Bots, Cheats, Exploits &amp; Guides
+                         </option>
+                         <option class="fjdpth1" value="653">
+                          Rift
+                         </option>
+                         <option class="fjdpth2" value="655">
+                          Rift Guides &amp; Strategies
+                         </option>
+                         <option class="fjdpth2" value="656">
+                          Rift Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="658">
+                          Rift Black Market
+                         </option>
+                         <option class="fjdpth1" value="419">
+                          Rohan
+                         </option>
+                         <option class="fjdpth1" value="360">
+                          Runescape
+                         </option>
+                         <option class="fjdpth2" value="662">
+                          Runescape Private Server
+                         </option>
+                         <option class="fjdpth2" value="566">
+                          Runescape Black Market
+                         </option>
+                         <option class="fjdpth1" value="478">
+                          Shaiya
+                         </option>
+                         <option class="fjdpth2" value="571">
+                          Shaiya Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth2" value="604">
+                          Shaiya Private Server
+                         </option>
+                         <option class="fjdpth3" value="645">
+                          Shaiya PServer Development
+                         </option>
+                         <option class="fjdpth3" value="742">
+                          Shaiya PServer Guides &amp; Releases
+                         </option>
+                         <option class="fjdpth3" value="646">
+                          Shaiya PServer Advertising
+                         </option>
+                         <option class="fjdpth2" value="678">
+                          Shaiya Black Market
+                         </option>
+                         <option class="fjdpth1" value="709">
+                          Tera
+                         </option>
+                         <option class="fjdpth1" value="765">
+                          The Elder Scrolls Online
+                         </option>
+                         <option class="fjdpth2" value="809">
+                          TESO Black Market
+                         </option>
+                         <option class="fjdpth1" value="683">
+                          Vindictus
+                         </option>
+                         <option class="fjdpth1" value="766">
+                          Wildstar
+                         </option>
+                         <option class="fjdpth2" value="783">
+                          Wildstar Black Market
+                         </option>
+                         <option class="fjdpth1" value="364">
+                          Zero
+                         </option>
+                         <option class="fjdpth0" value="198">
+                          Other Online Games
+                         </option>
+                         <option class="fjdpth1" value="752">
+                          Cube World
+                         </option>
+                         <option class="fjdpth1" value="297">
+                          Diablo 2
+                         </option>
+                         <option class="fjdpth2" value="593">
+                          Diablo 2 Programming
+                         </option>
+                         <option class="fjdpth1" value="734">
+                          DotA
+                         </option>
+                         <option class="fjdpth1" value="746">
+                          Fifa
+                         </option>
+                         <option class="fjdpth2" value="760">
+                          Fifa Black Market
+                         </option>
+                         <option class="fjdpth1" value="672">
+                          Grand Theft Auto
+                         </option>
+                         <option class="fjdpth2" value="756">
+                          GTA Black Market
+                         </option>
+                         <option class="fjdpth1" value="764">
+                          Hearthstone
+                         </option>
+                         <option class="fjdpth2" value="768">
+                          Hearthstone Black Market
+                         </option>
+                         <option class="fjdpth1" value="575">
+                          Heroes of Newerth
+                         </option>
+                         <option class="fjdpth1" value="637">
+                          Minecraft
+                         </option>
+                         <option class="fjdpth2" value="661">
+                          Minecraft Guides &amp; Strategies
+                         </option>
+                         <option class="fjdpth2" value="692">
+                          Minecraft Mods, Textures, Skins &amp; Maps
+                         </option>
+                         <option class="fjdpth2" value="652">
+                          Minecraft Server Advertising
+                         </option>
+                         <option class="fjdpth2" value="660">
+                          Minecraft Black Market
+                         </option>
+                         <option class="fjdpth1" value="638">
+                          Need for Speed World
+                         </option>
+                         <option class="fjdpth2" value="754">
+                          NFSW Hacks, Bots, Cheats &amp; Exploits
+                         </option>
+                         <option class="fjdpth1" value="745">
+                          Path of Exile
+                         </option>
+                         <option class="fjdpth1" value="666">
+                          Pokemon
+                         </option>
+                         <option class="fjdpth1" value="619">
+                          Starcraft 2
+                         </option>
+                         <option class="fjdpth1" value="667">
+                          Terraria
+                         </option>
+                         <option class="fjdpth1" value="767">
+                          World of Tanks
+                         </option>
+                         <option class="fjdpth2" value="804">
+                          World of Tanks Black Market
+                         </option>
+                         <option class="fjdpth1" value="487">
+                          Browsergames
+                         </option>
+                         <option class="fjdpth2" value="599">
+                          Facebook
+                         </option>
+                         <option class="fjdpth3" value="772">
+                          Dragon City
+                         </option>
+                         <option class="fjdpth2" value="654">
+                          DarkOrbit
+                         </option>
+                         <option class="fjdpth2" value="732">
+                          Seafight
+                         </option>
+                         <option class="fjdpth2" value="669">
+                          Browsergames Black Market
+                         </option>
+                         <option class="fjdpth1" value="799">
+                          Mobile Games
+                         </option>
+                         <option class="fjdpth2" value="818">
+                          Clash of Clans
+                         </option>
+                         <option class="fjdpth3" value="819">
+                          Clash of Clans Black Market
+                         </option>
+                         <option class="fjdpth2" value="821">
+                          Mobile Games Black Market
+                         </option>
+                         <option class="fjdpth0" value="687">
+                          Coders Den
+                         </option>
+                         <option class="fjdpth1" value="325">
+                          General Coding
+                         </option>
+                         <option class="fjdpth2" value="326">
+                          Coding Tutorials
+                         </option>
+                         <option class="fjdpth2" value="588">
+                          Coding Releases
+                         </option>
+                         <option class="fjdpth3" value="773">
+                          Coding Snippets
+                         </option>
+                         <option class="fjdpth2" value="730">
+                          Coders Black Market
+                         </option>
+                         <option class="fjdpth1" value="689">
+                          C/C++
+                         </option>
+                         <option class="fjdpth1" value="690">
+                          .NET Languages
+                         </option>
+                         <option class="fjdpth1" value="813">
+                          Java
+                         </option>
+                         <option class="fjdpth1" value="500">
+                          AutoIt
+                         </option>
+                         <option class="fjdpth1" value="691">
+                          Web Development
+                         </option>
+                         <option class="fjdpth0" value="688">
+                          Artists Den
+                         </option>
+                         <option class="fjdpth1" value="305">
+                          General Art
+                         </option>
+                         <option class="fjdpth2" value="323">
+                          Artist Tutorials
+                         </option>
+                         <option class="fjdpth2" value="751">
+                          Artist Showcase
+                         </option>
+                         <option class="fjdpth2" value="629">
+                          Artist Battles
+                         </option>
+                         <option class="fjdpth2" value="699">
+                          Artist Black Market
+                         </option>
+                         <option class="fjdpth1" value="302">
+                          Video Art
+                         </option>
+                         <option class="fjdpth0" value="693">
+                          Hardware
+                         </option>
+                         <option class="fjdpth1" value="684">
+                          Hardware Discussions / Questions
+                         </option>
+                         <option class="fjdpth1" value="685">
+                          Hardware Reviews
+                         </option>
+                         <option class="fjdpth0" value="201">
+                          Off-Topics
+                         </option>
+                         <option class="fjdpth1" value="208">
+                          Off Topic
+                         </option>
+                         <option class="fjdpth1" value="207">
+                          Polls
+                         </option>
+                         <option class="fjdpth1" value="230">
+                          Technical Support
+                         </option>
+                         <option class="fjdpth1" value="271">
+                          Tutorials
+                         </option>
+                         <option class="fjdpth1" value="260">
+                          Quotes
+                         </option>
+                         <option class="fjdpth1" value="708">
+                          Smartphones
+                         </option>
+                         <option class="fjdpth1" value="747">
+                          Sports
+                         </option>
+                         <option class="fjdpth1" value="761">
+                          Cooking
+                         </option>
+                         <option class="fjdpth1" value="362">
+                          Music
+                         </option>
+                         <option class="fjdpth1" value="444">
+                          Movies
+                         </option>
+                         <option class="fjdpth1" value="489">
+                          Anime &amp; Manga
+                         </option>
+                         <option class="fjdpth1" value="319">
+                          Oldschool
+                         </option>
+                        </optgroup>
+                       </select>
+                       <input class="button" type="submit" value="Go"/>
+                      </form>
+                     </div>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                 <script src="http://www.elitepvpers.com/forum/clientscript/prettify/prettify.js" type="text/javascript">
+                 </script>
+                 <script type="text/javascript">
+                  prettyPrint();
+                 </script>
+                 <br/>
+                 <div align="center" class="smallfont">
+                  All times are GMT +2. The time now is
+                  <span class="time">
+                   02:38
+                  </span>
+                  .
+                 </div>
+                 <br/>
+                </div>
+               </div>
+              </div>
+              <form action="http://www.elitepvpers.com/forum/" method="get" style="clear:left">
+               <table align="center" border="0" cellpadding="6" cellspacing="0" class="page" width="100%">
+                <tbody>
+                 <tr>
+                  <td class="tfoot">
+                   <select name="styleid" onchange="switch_id(this, 'style')">
+                    <optgroup label="Quick Style Chooser">
+                     <option class="" selected="selected" value="3">
+                      -- elitepvpers
+                     </option>
+                     <option class="" value="4">
+                      ---- Mobile Skin
+                     </option>
+                     <option class="" value="2">
+                      -- epvp (obsolete)
+                     </option>
+                    </optgroup>
+                   </select>
+                  </td>
+                  <td class="tfoot">
+                   <select name="langid" onchange="switch_id(this, 'lang')">
+                    <optgroup label="Quick Language Chooser">
+                     <option class="" selected="selected" value="1">
+                      -- English (US)
+                     </option>
+                     <option class="" value="2">
+                      -- German (DE)
+                     </option>
+                    </optgroup>
+                   </select>
+                  </td>
+                  <td align="right" class="tfoot" width="100%">
+                   <div class="smallfont">
+                    <strong>
+                     <a href="http://www.elitepvpers.com">
+                      elitepvpers - play less, get more
+                     </a>
+                     -
+                     <a href="http://www.elitepvpers.com/forum/main/announcement-attention-achtung-problem-multiaccounting-acc-trading.html?langid=1#top" onclick="self.scrollTo(0, 0); return false;">
+                      Top
+                     </a>
+                    </strong>
+                   </div>
+                  </td>
+                 </tr>
+                </tbody>
+               </table>
+               <br/>
+               <div align="center">
+                <div align="center" class="smallfont">
+                 Powered by vBulletin®
+                 <br/>
+                 Copyright ©2000 - 2015, Jelsoft Enterprises Ltd.
+                 <br/>
+                 SEO by vBSEO ©2011, Crawlability, Inc.
+                </div>
+                <div align="center" class="smallfont">
+                </div>
+               </div>
+              </form>
+              <br/>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </td>
+        </tr>
+        <tr>
+         <td id="footerbg">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+           <tbody>
+            <tr>
+             <td width="100">
+              <img alt="" height="60" src="http://www.elitepvpers.com/images/pvp_white.gif" width="85"/>
+             </td>
+             <td>
+              <a href="http://www.elitepvpers.com/support/" rel="nofollow">
+               Support
+              </a>
+              |
+              <a href="http://www.elitepvpers.com/forum/sendmessage.php" rel="nofollow">
+               Contact Us
+              </a>
+              |
+              <a href="http://www.elitepvpers.com/forum/faq.php" rel="nofollow">
+               FAQ
+              </a>
+              |
+              <a href="http://www.elitepvpers.com/forum/sendmessage.php" rel="nofollow">
+               Advertising
+              </a>
+              |
+              <a href="http://www.elitepvpers.com/privacypolicy.php" rel="nofollow">
+               Privacy Policy
+              </a>
+              <br/>
+              Copyright ©2015 elitepvpers All Rights Reserved.
+             </td>
+             <td>
+              <a href="http://www.facebook.com/elitepvpers" rel="nofollow" target="_blank">
+               <img alt="" height="24" src="http://www.elitepvpers.com/images/socialicon/facebook.png" width="24"/>
+              </a>
+              <a href="http://twitter.com/elitepvpers" rel="nofollow" target="_blank">
+               <img alt="" height="24" src="http://www.elitepvpers.com/images/socialicon/twitter.png" width="24"/>
+              </a>
+              <a href="http://www.youtube.com/user/epvpgames" rel="nofollow" target="_blank">
+               <img alt="" height="24" src="http://www.elitepvpers.com/images/socialicon/youtube.png" width="24"/>
+              </a>
+              <a href="http://google.com/+elitepvpers" rel="nofollow" target="_blank">
+               <img alt="" height="24" src="http://www.elitepvpers.com/images/socialicon/google.png" width="24"/>
+              </a>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+           <tbody>
+            <tr>
+             <td align="left" valign="top" width="5">
+              <img alt="" height="7" src="http://www.elitepvpers.com/images/footer_corner_left.png" width="5"/>
+             </td>
+             <td id="footerbgend">
+             </td>
+             <td align="right" valign="top" width="5">
+              <img alt="" height="7" src="http://www.elitepvpers.com/images/footer_corner_right.png" width="5"/>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <script type="text/javascript">
+   <!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+  </script>
+  <div id="div-gpt-ad-1392303584193-5" style="width:1px; height:1px;">
+   <script type="text/javascript">
+    googletag.display('div-gpt-ad-1392303584193-5');
+   </script>
+  </div>
+ </body>
+</html>
