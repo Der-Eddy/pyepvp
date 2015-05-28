@@ -58,3 +58,5 @@ target/
 
 
 passwd.txt
+debug
+pyepvp/debug

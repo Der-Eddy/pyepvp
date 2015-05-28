@@ -15,6 +15,7 @@ class session:
     guestSession = False
     cookieJar = ""
     securityToken = ""
+    paramsGet = "&langid=1"
 
     def __init__(self, uname, passwd=None, md5bool=False):
         if passwd is not None: #Checks if User Session
@@ -33,7 +34,7 @@ class session:
             return "No PW given"
 
     def login(self, uname, md5):
-        loginnurl = "http://www.elitepvpers.com/forum/login.php?do=login&langid=1"
+        loginnurl = "http://www.elitepvpers.com/forum/login.php?do=login" + self.paramsGet
 
         params = {
             "do": "login",
