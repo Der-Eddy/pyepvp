@@ -5,12 +5,10 @@ import platform
 import json
 import os
 from . import regexp
+from . import exception
 
 class session:
     system = platform.system()
-    systemVersion = platform.version()
-    pythonBuild = platform.python_build()
-    pythonVersion = platform.python_version()
     with open(os.path.abspath("pyepvp/about.json"), "r") as file:
         about = json.load(file)
     userAgent = system.lower() + ":" + about["appID"] + "." + about["name"] + ":" + about["version"] + " (by " + about["author"] + ")"
@@ -62,6 +60,8 @@ class session:
 
         r = requests.get("http://www.elitepvpers.com/forum/usercp.php", headers=self.headers, cookies=self.cookieJar)
         self.securityToken = regexp.match("SECURITYTOKEN = \"(\S+)\";", r.content)
+        if self.securityToken == "guest":
+            raise exception.invalidAuthenticationException()
 
     def logout(self):
         requests.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken, headers=self.headers, cookies=self.cookieJar)
