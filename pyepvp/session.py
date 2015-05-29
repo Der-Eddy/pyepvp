@@ -1,11 +1,21 @@
 import requests
 import hashlib
 import time
+import platform
+import json
+import os
 from . import regexp
 
 class session:
+    system = platform.system()
+    systemVersion = platform.version()
+    pythonBuild = platform.python_build()
+    pythonVersion = platform.python_version()
+    with open(os.path.abspath("pyepvp/about.json"), "r") as file:
+        about = json.load(file)
+    userAgent = system.lower() + ":" + about["appID"] + "." + about["name"] + ":" + about["version"] + " (by " + about["author"] + ")"
     headers = {
-        "User-Agent" : "linux:net.eddy-dev.pyepvp:v1.0dev (by Der-Eddy)",
+        "User-Agent" : userAgent,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
         "Accept-Language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4",
         "Accept-Encoding": "gzip,deflate",
