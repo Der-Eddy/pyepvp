@@ -1,6 +1,7 @@
 import requests
 import bs4
 import re
+from . import regexp
 
 def parser(session, url):
     r = requests.get(url + "?langid=1", headers=session.headers, cookies=session.cookieJar)
@@ -12,6 +13,18 @@ def getSections(session):
     content = soup.find(attrs={"label": "Site Areas"}).parent.prettify()
     match = re.findall("value=\"(\d+)\">\s*(.+)\s*<\/option>", str(content))
     return forumList(match)
+
+def rankParser(content):
+    soup = content.find(id="rank")
+    return soup.prettify()
+
+def securityTokenParser(content):
+    securityToken = regexp.match("SECURITYTOKEN = \"(\S+)\";", content)
+    return securityToken
+
+def userIDParser(content):
+    userID = regexp.match("members\/(\d+)-\D+>Your Profile", content)
+    return userID
 
 class forumList:
     forumList = []

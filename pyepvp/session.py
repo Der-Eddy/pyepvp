@@ -5,7 +5,8 @@ import platform
 import json
 import os
 from . import regexp
-from . import exception
+from . import exceptions
+from . import parser
 
 class session:
     system = platform.system()
@@ -23,6 +24,8 @@ class session:
     guestSession = False
     cookieJar = ""
     securityToken = ""
+    userID = ""
+    ranks = ["guest"]
     paramsGet = "&langid=1"
 
     def __init__(self, uname, passwd=None, md5bool=False):
@@ -58,10 +61,15 @@ class session:
         
         self.cookieJar = r.cookies
 
-        r = requests.get("http://www.elitepvpers.com/forum/usercp.php", headers=self.headers, cookies=self.cookieJar)
-        self.securityToken = regexp.match("SECURITYTOKEN = \"(\S+)\";", r.content)
+        soup = parser.parser(self, "http://www.elitepvpers.com/forum/usercp.php")
+        self.securityToken = parser.securityTokenParser(soup)
         if self.securityToken == "guest":
-            raise exception.invalidAuthenticationException()
+            raise exceptions.invalidAuthenticationException()
+        self.userID = parser.userIDParser(soup)
+        print (self.userID)
+        userSoup = parser.parser(self, "http://www.elitepvpers.com/forum/member.php?userid=" + self.userID)
+        rankParser = parser.rankParser(userSoup)
+        print (rankParser)
 
     def logout(self):
         requests.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken, headers=self.headers, cookies=self.cookieJar)
