@@ -68,8 +68,8 @@ class session:
         self.userID = parser.userIDParser(soup)
         print (self.userID)
         userSoup = parser.parser(self, "http://www.elitepvpers.com/forum/member.php?userid=" + self.userID)
-        rankParser = parser.rankParser(userSoup)
-        print (rankParser)
+        self.ranks = parser.rankParser(userSoup)
+        print (self.ranks)
 
     def logout(self):
         requests.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken, headers=self.headers, cookies=self.cookieJar)

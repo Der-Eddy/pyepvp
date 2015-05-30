@@ -16,7 +16,10 @@ def getSections(session):
 
 def rankParser(content):
     soup = content.find(id="rank")
-    return soup.prettify()
+    if soup == None:
+        return ["user"]
+    ranks = re.findall("teamicons\/relaunch\/(\w+).png", soup.prettify())
+    return ranks
 
 def securityTokenParser(content):
     securityToken = regexp.match("SECURITYTOKEN = \"(\S+)\";", content)
