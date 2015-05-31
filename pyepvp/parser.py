@@ -2,10 +2,13 @@ import requests
 import bs4
 import re
 from . import regexp
+from . import exceptions
 
 def parser(session, url):
     r = requests.get(url + "?langid=1", headers=session.headers, cookies=session.cookieJar)
     soup = bs4.BeautifulSoup(r.content)
+    if soup.title == "Database Error":
+        raise exceptions.requestDatabaseException()
     return soup
 
 def getSections(session):

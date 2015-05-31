@@ -9,11 +9,23 @@ def systemInfo():
     systemInfo = " (" + system + " " + systemVersion + " | " + pythonBuild[0] + ")"
     return systemInfo
 
-moderators = ["Administrator", "Global Moderator", "Moderator"]
-undergroundUsers = ["Level3", "Level2"]
-shoutboxUsers = ["Premium"]
+moderators = ["coadmin", "globalmod", "moderator"]
+undergroundUsers = ["level3", "level2"]
+shoutboxUsers = ["premium"]
 shoutboxUsers.extend(moderators)
 shoutboxUsers.extend(undergroundUsers)
+
+def hasPermissions(ranks, group):
+    hasRight = False
+    for rank in ranks:
+        if rank in group:
+            hasRight = True
+            continue
+    if hasRight == False:
+        raise insufficientAccessException()
+        return False
+    else:
+        return True
 
 class insufficientAccessException(Exception):
     def __init__(self):
@@ -26,3 +38,7 @@ class invalidAuthenticationException(Exception):
 class requestFailedException(Exception):
     def __init__(self):
         super(requestFailedException, self).__init__("Elitepvpers nicht erreichbar" + systemInfo())
+
+class requestDatabaseException(Exception):
+    def __init__(self):
+        super(requestFailedException, self).__init__("Elitepvpers Datenbank nicht erreichbar (Ist Backup Zeit?)" + systemInfo())
