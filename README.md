@@ -1,5 +1,5 @@
-# pyepvp
-An Python API based on the idea of [.NET epvpapi](https://github.com/Mostey/epvpapi).  
+![logo](logo.png)
+A Python API based on the idea of [.NET epvpapi](https://github.com/Mostey/epvpapi).  
 Currently in planning phase, let me know if you have any idea for my project!
 
 
