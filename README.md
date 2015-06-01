@@ -1,6 +1,6 @@
 ![logo](logo.png)
 
-
+[![Build Status](https://travis-ci.org/Der-Eddy/pyepvp.svg)](https://travis-ci.org/Der-Eddy/pyepvp)  
 A Python API based on the idea of [.NET epvpapi](https://github.com/Mostey/epvpapi).  
 Currently in planning phase, let me know if you have any idea for my project!
 
