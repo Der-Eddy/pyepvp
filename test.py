@@ -6,7 +6,8 @@ import re
 with open("passwd.txt") as txt:
     passwd = txt.read()
 #passwd = "my md5 hash password"
-eddy = pyepvp.session.session("Der-Eddy", passwd, True)
+secretWord = "Super Secret Word"
+eddy = pyepvp.session.session("Der-Eddy", passwd, True, secretWord)
 print (eddy.securityToken)
 forumList = pyepvp.parser.getSections(eddy)
 print(forumList.getByID(205))

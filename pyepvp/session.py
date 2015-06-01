@@ -24,11 +24,14 @@ class session:
     guestSession = False
     cookieJar = ""
     securityToken = ""
+    secretWord = None
     userID = ""
     ranks = ["guest"]
     paramsGet = "&langid=1"
 
-    def __init__(self, uname, passwd=None, md5bool=False):
+    def __init__(self, uname, passwd=None, md5bool=False, secretWord=None):
+        if secretWord is not None:
+            self.secretWord = secretWord
         if passwd is not None: #Checks if User Session
             if md5bool == True:
                 md5 = passwd

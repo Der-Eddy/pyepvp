@@ -33,6 +33,14 @@
         <!-- Collapsed navigation -->
         <div class="navbar-header">
             
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
 
             <!-- Main title -->
             <a class="navbar-brand" href=".">My Docs</a>
@@ -41,6 +49,23 @@
         <!-- Expanded navigation -->
         <div class="navbar-collapse collapse">
             
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="active">
+                        <a href=".">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="session/">Session</a>
+                    </li>
+                
+                
+                </ul>
+            
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -48,6 +73,17 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
+                
+                    <li class="disabled">
+                        <a rel="next" >
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="session/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
                 
                 
             </ul>
@@ -60,31 +96,68 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
+        <li class="main active"><a href="#requirements">Requirements</a></li>
         
-            <li><a href="#commands">Commands</a></li>
+    
+        <li class="main "><a href="#samples-and-usage">Samples and Usage</a></li>
         
-            <li><a href="#project-layout">Project layout</a></li>
+    
+        <li class="main "><a href="#todo">ToDo</a></li>
+        
+    
+        <li class="main "><a href="#license">License</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<p><img alt="logo" src="./logo.png" /></p>
+<p><a href="https://travis-ci.org/Der-Eddy/pyepvp"><img alt="Build Status" src="https://travis-ci.org/Der-Eddy/pyepvp.svg" /></a>  <a href="http://pyepvp.readthedocs.org/en/latest/"><img alt="Doc Status" src="https://readthedocs.org/projects/pyepvp/badge/?version=latest" /></a><br />
+A Python API based on the idea of <a href="https://github.com/Mostey/epvpapi">.NET epvpapi</a><br />
+Currently in planning phase, let me know if you have any idea for my project!</p>
+<h2 id="requirements">Requirements</h2>
+<p>Needs some lib packages, easily installed with pip</p>
+<pre><code>pip install requests
+pip install beautifulsoup4
+</code></pre>
+<h2 id="samples-and-usage">Samples and Usage</h2>
+<p>For that, you should currently take a look at <code>test.py</code>  </p>
+<pre><code>import pyepvp.session
+eddy = pyepvp.session.session("Der-Eddy", passwordmd5hash, True)
+print (eddy.securityToken)
+eddy.logout()
+guest = pyepvp.session.session("guest")
+print (guest.securityToken)
+</code></pre>
+<h2 id="todo">ToDo</h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
+<li>Add more functionality (TBM, Thread/Post methods and such)</li>
+<li>Create a documentation</li>
+<li>Make a python package out of it (So you can install it through pip)</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<h2 id="license">License</h2>
+<pre><code>The MIT License (MIT)
+
+Copyright (c) 2015
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 </code></pre></div>
             
         </div>
@@ -132,5 +205,5 @@ docs/
 
 <!--
 MkDocs version : 0.13.2
-Build Date UTC : 2015-06-01 15:32:28.040483
+Build Date UTC : 2015-06-01 15:51:27.536889
 -->
