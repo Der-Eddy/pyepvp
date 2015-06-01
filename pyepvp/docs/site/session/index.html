@@ -117,11 +117,11 @@
 <pre><code>import pyepvp.session
 eddy = pyepvp.session.session("Der-Eddy", passwordmd5hash, True, superSecretWord)
 </code></pre>
-<p>Everything but the username is optional, you can also use either your password or a md5 hash of your passwort by using <code>md5bool=True</code>.<br />
-Other Examples</p>
+<p>Everything but the username is optional, you can also use either your password or a md5 hash of your passwort by using <code>md5bool=True</code>.  </p>
+<p>Other Example</p>
 <pre><code>eddy = pyepvp.session.session("Der-Eddy", normalPassword)
 </code></pre>
-<p>However, keep in mind if you don't set a secret world then you can't use specific TBM functions</p>
+<p>However, keep in mind if you don't set a secret world then you can't use specific TBM functions.</p>
 <h3 id="creating-a-guest-session">Creating a guest session</h3>
 <p>For that, simply use as a username <code>guest</code></p>
 <pre><code>guest = pyepvp.session.session("guest")
