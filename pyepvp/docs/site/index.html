@@ -112,9 +112,7 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><img alt="logo" src="./logo.png" /></p>
-<p><a href="https://travis-ci.org/Der-Eddy/pyepvp"><img alt="Build Status" src="https://travis-ci.org/Der-Eddy/pyepvp.svg" /></a>  <a href="http://pyepvp.readthedocs.org/en/latest/"><img alt="Doc Status" src="https://readthedocs.org/projects/pyepvp/badge/?version=latest" /></a><br />
-A Python API based on the idea of <a href="https://github.com/Mostey/epvpapi">.NET epvpapi</a><br />
+<p>A Python API based on the idea of <a href="https://github.com/Mostey/epvpapi">.NET epvpapi</a><br />
 Currently in planning phase, let me know if you have any idea for my project!</p>
 <h2 id="requirements">Requirements</h2>
 <p>Needs some lib packages, easily installed with pip</p>
@@ -124,7 +122,7 @@ pip install beautifulsoup4
 <h2 id="samples-and-usage">Samples and Usage</h2>
 <p>For that, you should currently take a look at <code>test.py</code>  </p>
 <pre><code>import pyepvp.session
-eddy = pyepvp.session.session("Der-Eddy", passwordmd5hash, True)
+eddy = pyepvp.session.session("Der-Eddy", passwordmd5hash, True, secretWord)
 print (eddy.securityToken)
 eddy.logout()
 guest = pyepvp.session.session("guest")
@@ -205,5 +203,5 @@ SOFTWARE.
 
 <!--
 MkDocs version : 0.13.2
-Build Date UTC : 2015-06-01 16:10:21.444983
+Build Date UTC : 2015-06-02 20:54:38.919720
 -->
