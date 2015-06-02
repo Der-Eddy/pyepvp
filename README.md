@@ -1,6 +1,6 @@
 ![logo](logo.png)
 
-[![Build Status](https://travis-ci.org/Der-Eddy/pyepvp.svg)](https://travis-ci.org/Der-Eddy/pyepvp)  [![Doc Status](https://readthedocs.org/projects/pyepvp/badge/?version=latest)](http://pyepvp.readthedocs.org/en/latest/)  
+[![Build Status](https://travis-ci.org/Der-Eddy/pyepvp.svg)](https://travis-ci.org/Der-Eddy/pyepvp)  [![Doc Status](https://readthedocs.org/projects/pyepvp/badge/?version=latest)](http://pyepvp.readthedocs.org/en/latest/)  [![Issues](https://img.shields.io/github/issues/Der-Eddy/pyepvp.svg)](https://github.com/Der-Eddy/pyepvp/issues)  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Der-Eddy/pyepvp/blob/master/LICENSE)  
 A Python API based on the idea of [.NET epvpapi](https://github.com/Mostey/epvpapi)  
 Currently in planning phase, let me know if you have any idea for my project!
 
