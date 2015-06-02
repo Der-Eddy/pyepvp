@@ -6,15 +6,16 @@ from . import exceptions
 
 def parser(session, url):
     r = requests.get(url + "?langid=1", headers=session.headers, cookies=session.cookieJar)
+    #r.content = str.replace(r.content.decode(), "&amp;", "&")
     soup = bs4.BeautifulSoup(r.content)
     if soup.title == "Database Error":
         raise exceptions.requestDatabaseException()
     return soup
 
 def getSections(session):
-    soup = parser(session, "http://www.elitepvpers.com/forum/main/981452-hwid-generator-dev-tools-f-r-e-pvps-hwid-system.html")
+    soup = parser(session, "http://www.elitepvpers.com/forum/main/announcement-board-rules-signature-rules.html")
     content = soup.find(attrs={"label": "Site Areas"}).parent.prettify()
-    match = re.findall("value=\"(\d+)\">\s*(.+)\s*<\/option>", str(content))
+    match = re.findall("value=\"(\d+)\">\s*(.+)\s*<\/option>", str.replace(str(content), "&amp;", "&"))
     return forumList(match)
 
 def rankParser(content):

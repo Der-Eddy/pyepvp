@@ -65,8 +65,8 @@ class session:
         self.cookieJar = r.cookies
 
         soup = parser.parser(self, "http://www.elitepvpers.com/forum/usercp.php")
-        #with open("debug", 'w') as file_:
-        #    file_.write(soup.prettify())
+        #with open("debug", 'wb') as file_:
+        #    file_.write(soup.prettify().encode("utf-8"))
         self.securityToken = parser.securityTokenParser(soup)
         if self.securityToken == "guest":
             raise exceptions.invalidAuthenticationException()

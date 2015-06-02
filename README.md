@@ -21,7 +21,7 @@ Samples and Usage
 For that, you should currently take a look at `test.py`  
 
     import pyepvp.session
-    eddy = pyepvp.session.session("Der-Eddy", passwordmd5hash, True)
+    eddy = pyepvp.session.session("Der-Eddy", passwordmd5hash, True, secretWord)
     print (eddy.securityToken)
     eddy.logout()
     guest = pyepvp.session.session("guest")

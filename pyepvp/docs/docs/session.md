@@ -2,7 +2,7 @@ Creating a session
 ---
 Creating a session is required for almost every single function in the library. By creating the authenticated session, you  provide login information that is used for logging into your elitepvpers account. Cookies get stored for further usage and are valid until you destroy the session or your scripts ends.
 
-You can also use a Guest Session with the username `guest`. However, not every function will work with a guest session (e.g. Shoutbox, posting in a topic or TBM functions and such).
+You can also use a guest session with the username `guest`. However, not every function will work with a guest session (e.g. Shoutbox, posting in a topic or TBM functions and such).
 
 
 #### Creating a user session object and using it
