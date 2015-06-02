@@ -12,10 +12,10 @@ def systemInfo():
 user = ["user"]
 guest = ["guest"]
 moderators = ["coadmin", "globalmod", "moderator"]
+editorial = ["editor", "translator", "podcaster", "broadcaster", "eventplanner"]
 undergroundUsers = ["level3", "level2"]
-shoutboxUsers = ["premium"]
-shoutboxUsers.extend(moderators)
-shoutboxUsers.extend(undergroundUsers)
+premiumUsers = ["premium"] + editorial
+shoutboxUsers = ["premium"] + moderators + undergroundUsers
 
 def hasPermissions(ranks, group):
     if ranks == user and group == guest:
@@ -26,7 +26,7 @@ def hasPermissions(ranks, group):
             hasRight = True
             continue
     if hasRight == False:
-        raise insufficientAccessException(ranks)
+        raise insufficientAccessException(group)
         return False
     else:
         return True
@@ -36,7 +36,7 @@ class insufficientAccessException(Exception):
         if guest == True:
             super(insufficientAccessException, self).__init__("You will need atleast an user session!" + systemInfo())
         else:
-            super(insufficientAccessException, self).__init__("You will need atleast one of " + neededRanks + " ranks to use that" + systemInfo())
+            super(insufficientAccessException, self).__init__("You will need atleast one of " + str(neededRanks) + " ranks to use that" + systemInfo())
 
 class emptyObjectException(Exception):
     def __init__(self, objectName):
@@ -44,7 +44,7 @@ class emptyObjectException(Exception):
 
 class invalidAuthenticationException(Exception):
     def __init__(self):
-        super(invalidAuthenticationException, self).__init__("Login doesn't work" + systemInfo())
+        super(invalidAuthenticationException, self).__init__("Login doesn't work (Wrong Username or Password?)" + systemInfo())
 
 class requestFailedException(Exception):
     def __init__(self):

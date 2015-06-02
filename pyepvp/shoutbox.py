@@ -1,10 +1,10 @@
 from . import exceptions
+from . import parser
 
 def getShoutbox(session):
     exceptions.hasPermissions(session.ranks, exceptions.shoutboxUsers)
             
-    r = requests.get("http://www.elitepvpers.com/forum/mgc_cb_evo.php?do=view_archives&page=1?langid=1", headers=session.headers, cookies=session.cookieJar)
-    soup = bs4.BeautifulSoup(r.content)
+    soup = parser.parser(session, "http://www.elitepvpers.com/forum/mgc_cb_evo.php?do=view_archives&page=1?langid=1")
     return soup
 
 class shoutbox:

@@ -31,7 +31,7 @@ For that, you should currently take a look at `test.py`
 ToDo
 -------------
 * Add more functionality (TBM, Thread/Post methods and such)
-* Create a documentation
+* Update the documentation
 * Make a python package out of it (So you can install it through pip)
 
 
