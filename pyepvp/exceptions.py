@@ -9,6 +9,8 @@ def systemInfo():
     systemInfo = " (" + system + " " + systemVersion + " | " + pythonBuild[0] + ")"
     return systemInfo
 
+user = ["user"]
+guest = ["guest"]
 moderators = ["coadmin", "globalmod", "moderator"]
 undergroundUsers = ["level3", "level2"]
 shoutboxUsers = ["premium"]
@@ -16,29 +18,38 @@ shoutboxUsers.extend(moderators)
 shoutboxUsers.extend(undergroundUsers)
 
 def hasPermissions(ranks, group):
+    if ranks == user and group == guest:
+        insufficientAccessException(guest=True)
     hasRight = False
     for rank in ranks:
         if rank in group:
             hasRight = True
             continue
     if hasRight == False:
-        raise insufficientAccessException()
+        raise insufficientAccessException(ranks)
         return False
     else:
         return True
 
 class insufficientAccessException(Exception):
-    def __init__(self):
-        super(insufficientAccessException, self).__init__("Nicht die passenden Rechte" + systemInfo())
+    def __init__(self, neededRanks=["user"], guest=False):
+        if guest == True:
+            super(insufficientAccessException, self).__init__("You will need atleast an user session!" + systemInfo())
+        else:
+            super(insufficientAccessException, self).__init__("You will need atleast one of " + neededRanks + " ranks to use that" + systemInfo())
+
+class emptyObjectException(Exception):
+    def __init__(self, objectName):
+        super(insufficientAccessException, self).__init__("Empty Object \"" + objectName + "\" given (Parsing Error?)" + systemInfo())
 
 class invalidAuthenticationException(Exception):
     def __init__(self):
-        super(invalidAuthenticationException, self).__init__("Login nicht möglich" + systemInfo())
+        super(invalidAuthenticationException, self).__init__("Login doesn't work" + systemInfo())
 
 class requestFailedException(Exception):
     def __init__(self):
-        super(requestFailedException, self).__init__("Elitepvpers nicht erreichbar" + systemInfo())
+        super(requestFailedException, self).__init__("Elitepvpers.com not reachable" + systemInfo())
 
 class requestDatabaseException(Exception):
     def __init__(self):
-        super(requestFailedException, self).__init__("Elitepvpers Datenbank nicht erreichbar (Ist Backup Zeit?)" + systemInfo())
+        super(requestFailedException, self).__init__("Elitepvpers.com Database not reachable (Backup Time?)" + systemInfo())

@@ -41,7 +41,7 @@ class forumList:
 
     def isSet(self):
         if forumList == []:
-            print ("Exception Placeholder")
+            raise exceptions.emptyObjectException("forumList")
             return 0
 
     def getByID(self, id):
