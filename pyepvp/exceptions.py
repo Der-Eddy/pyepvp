@@ -14,8 +14,7 @@ guest = ["guest"]
 moderators = ["coadmin", "globalmod", "moderator"]
 editorial = ["editor", "translator", "podcaster", "broadcaster", "eventplanner"]
 undergroundUsers = ["level3", "level2"]
-premiumUsers = ["premium"] + editorial
-shoutboxUsers = ["premium"] + moderators + undergroundUsers
+premiumUsers = ["premium"] + moderators + undergroundUsers + editorial
 
 def hasPermissions(ranks, group):
     if ranks == user and group == guest:

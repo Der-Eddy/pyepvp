@@ -2,7 +2,7 @@ from . import exceptions
 from . import parser
 
 def getShoutbox(session):
-    exceptions.hasPermissions(session.ranks, exceptions.shoutboxUsers)
+    exceptions.hasPermissions(session.ranks, exceptions.premiumUsers)
             
     soup = parser.parser(session, "http://www.elitepvpers.com/forum/mgc_cb_evo.php?do=view_archives&page=1?langid=1")
     return soup
