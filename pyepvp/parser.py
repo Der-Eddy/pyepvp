@@ -1,11 +1,13 @@
 import requests
 import bs4
 import re
+import logging
 from . import regexp
 from . import exceptions
 
 def parser(session, url):
     r = requests.get(url + "?langid=1", headers=session.headers, cookies=session.cookieJar)
+    logging.debug("Size of " + url + ": " + str(len(r.content)))
     #r.content = str.replace(r.content.decode(), "&amp;", "&")
     soup = bs4.BeautifulSoup(r.content)
     if soup.title == "Database Error":
