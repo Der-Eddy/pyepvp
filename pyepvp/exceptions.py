@@ -6,7 +6,7 @@ def systemInfo():
     pythonBuild = platform.python_build()
     pythonVersion = platform.python_version()
 
-    systemInfo = " (" + system + " " + systemVersion + " | " + pythonBuild[0] + ")"
+    systemInfo = " (OS: " + system + " " + systemVersion + " | Python Version: " + pythonBuild[0] + ")"
     return systemInfo
 
 user = ["user"]

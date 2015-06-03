@@ -4,6 +4,7 @@ import time
 import platform
 import json
 import os
+import logging
 from . import regexp
 from . import exceptions
 from . import parser
@@ -30,6 +31,7 @@ class session:
     paramsGet = "&langid=1"
 
     def __init__(self, uname, passwd=None, md5bool=False, secretWord=None):
+        logging.info("Running on" + exceptions.systemInfo())
         if secretWord is not None:
             self.secretWord = secretWord
         if passwd is not None: #Checks if User Session

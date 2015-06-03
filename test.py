@@ -4,7 +4,7 @@ import pyepvp.shoutbox
 import re
 import logging
 
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 with open("passwd.txt") as txt:
     passwd = txt.read()
 #passwd = "my md5 hash password"
