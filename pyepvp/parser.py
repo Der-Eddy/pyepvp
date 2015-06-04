@@ -60,7 +60,4 @@ class forumList:
                 return int(i)
 
     def isIn(self, string):
-        if string in self.forumList:
-            return True
-        else:
-            return False
+        return string in self.forumList
