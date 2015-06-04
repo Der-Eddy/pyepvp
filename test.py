@@ -16,7 +16,7 @@ print(forumList.getByID(205))
 print(forumList.getByName("e*pvp News"))
 print(forumList.isIn(('205', 'e*pvp News')))
 shoutbox = pyepvp.shoutbox.getShoutbox(eddy)
-print(shoutbox.findAll(attrs={"align": "left"}))
+#print(shoutbox.findAll(attrs={"align": "left"}))
 eddy.logout()
 
 guest = pyepvp.session.session("guest")

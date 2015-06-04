@@ -39,7 +39,7 @@ class insufficientAccessException(Exception):
 
 class emptyObjectException(Exception):
     def __init__(self, objectName):
-        super(insufficientAccessException, self).__init__("Empty Object \"" + objectName + "\" given (Parsing Error?)" + systemInfo())
+        super(emptyObjectException, self).__init__("Empty Object \"" + objectName + "\" given (Parsing Error?)" + systemInfo())
 
 class invalidAuthenticationException(Exception):
     def __init__(self):
@@ -51,4 +51,4 @@ class requestFailedException(Exception):
 
 class requestDatabaseException(Exception):
     def __init__(self):
-        super(requestFailedException, self).__init__("Elitepvpers.com Database not reachable (Backup Time?)" + systemInfo())
+        super(requestDatabaseException, self).__init__("Elitepvpers.com Database not reachable (Backup Time?)" + systemInfo())

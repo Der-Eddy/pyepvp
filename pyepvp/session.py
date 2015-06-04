@@ -66,16 +66,14 @@ class session:
         
         self.cookieJar = r.cookies
 
-        soup = parser.parser(self, "http://www.elitepvpers.com/forum/usercp.php")
-        #with open("debug", 'wb') as file_:
-        #    file_.write(soup.prettify().encode("utf-8"))
-        self.securityToken = parser.securityTokenParser(soup)
+        content = parser.parser(self, "http://www.elitepvpers.com/forum/usercp.php")
+        self.securityToken = parser.securityTokenParser(content)
         if self.securityToken == "guest":
             raise exceptions.invalidAuthenticationException()
-        self.userID = parser.userIDParser(soup)
+        self.userID = parser.userIDParser(content)
         print (self.userID)
-        userSoup = parser.parser(self, "http://www.elitepvpers.com/forum/member.php?userid=" + self.userID)
-        self.ranks = parser.rankParser(userSoup)
+        usercontent = parser.parser(self, "http://www.elitepvpers.com/forum/member.php?userid=" + self.userID)
+        self.ranks = parser.rankParser(usercontent)
         print (self.ranks)
 
     def logout(self):

@@ -1,5 +1,4 @@
 import requests
-import bs4
 import re
 import logging
 from . import regexp
@@ -8,23 +7,20 @@ from . import exceptions
 def parser(session, url):
     r = requests.get(url + "?langid=1", headers=session.headers, cookies=session.cookieJar)
     logging.debug("Size of " + url + ": " + str(len(r.content)))
-    #r.content = str.replace(r.content.decode(), "&amp;", "&")
-    soup = bs4.BeautifulSoup(r.content)
-    if soup.title == "Database Error":
+    if regexp.match("<title>\s+(.+)\s+<\/title>", r.content) == "Database Error":
         raise exceptions.requestDatabaseException()
-    return soup
+    return r.content.decode('iso-8859-1')
 
 def getSections(session):
-    soup = parser(session, "http://www.elitepvpers.com/forum/main/announcement-board-rules-signature-rules.html")
-    content = soup.find(attrs={"label": "Site Areas"}).parent.prettify()
-    match = re.findall("value=\"(\d+)\">\s*(.+)\s*<\/option>", str.replace(str(content), "&amp;", "&"))
+    content = parser(session, "http://www.elitepvpers.com/forum/main/announcement-board-rules-signature-rules.html")
+    content = str.replace(str(content), "&amp;", "&")
+    content = str.replace(str(content), "&nbsp;", "")
+    debug(content)
+    match = re.findall("value=\"(\d+)\".+\">\s+(\D+)<\/option>", content)
     return forumList(match)
 
 def rankParser(content):
-    soup = content.find(id="rank")
-    if soup == None:
-        return ["user"]
-    ranks = re.findall("teamicons\/relaunch\/(\w+).png", soup.prettify())
+    ranks = re.findall("teamicons\/relaunch\/(\w+).png", content)
     return ranks
 
 def securityTokenParser(content):
@@ -35,10 +31,16 @@ def userIDParser(content):
     userID = regexp.match("members\/(\d+)-\D+>Your Profile", content)
     return userID
 
+def debug(content):
+    with open("debug", 'wb') as file_:
+        file_.write(content.encode("utf-8"))
+
 class forumList:
     forumList = []
 
     def __init__(self, forumList):
+        if forumList == []:
+            raise exceptions.emptyObjectException("forumList")
         self.forumList = forumList
 
     def isSet(self):

@@ -13,7 +13,6 @@ Requirements
 Needs some lib packages, easily installed with pip
 
     pip install requests
-    pip install beautifulsoup4
 
 
 Samples and Usage
