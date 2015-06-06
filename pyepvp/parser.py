@@ -7,15 +7,16 @@ from . import exceptions
 def parser(session, url):
     r = requests.get(url + "?langid=1", headers=session.headers, cookies=session.cookieJar)
     logging.debug("Size of " + url + ": " + str(len(r.content)))
-    if regexp.match("<title>\s+(.+)\s+<\/title>", r.content) == "Database Error":
+    if regexp.htmlTag("title", r.content) == "Database Error":
         raise exceptions.requestDatabaseException()
-    return r.content.decode('iso-8859-1')
+    content = r.content.decode('iso-8859-1')
+    content = str.replace(str(content), "&amp;", "&")
+    content = str.replace(str(content), "&nbsp;", "")
+    content = str.replace(str(content), "&lt;", "")
+    return content
 
 def getSections(session):
     content = parser(session, "http://www.elitepvpers.com/forum/main/announcement-board-rules-signature-rules.html")
-    content = str.replace(str(content), "&amp;", "&")
-    content = str.replace(str(content), "&nbsp;", "")
-    debug(content)
     match = re.findall("value=\"(\d+)\".+\">\s+(\D+)<\/option>", content)
     return forumList(match)
 
