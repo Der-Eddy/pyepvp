@@ -13,6 +13,7 @@ def parser(session, url):
     content = str.replace(str(content), "&amp;", "&")
     content = str.replace(str(content), "&nbsp;", "")
     content = str.replace(str(content), "&lt;", "")
+    content = str.replace(str(content), "&gt;", "")
     return content
 
 def getSections(session):

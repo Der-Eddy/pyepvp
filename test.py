@@ -4,7 +4,7 @@ import pyepvp.shoutbox
 import re
 import logging
 
-#logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 with open("passwd.txt") as txt:
     passwd = txt.read()
 #passwd = "my md5 hash password"
@@ -15,9 +15,11 @@ forumList = pyepvp.parser.getSections(eddy)
 print(forumList.getByID(205))
 print(forumList.getByName("e*pvp News"))
 print(forumList.isIn(('205', 'e*pvp News')))
-shoutbox = pyepvp.shoutbox.getShoutbox(eddy)
+shoutbox = pyepvp.shoutbox.shoutbox(eddy)
 print("--------------")
-print(shoutbox)
+print(shoutbox.messages[1])
+for i in shoutbox.messages:
+    print(i["username"])
 print("--------------")
 eddy.logout()
 

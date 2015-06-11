@@ -39,8 +39,8 @@ class session:
                 md5 = passwd
             else:
                 md5 = hashlib.md5(passwd.encode("utf-8"));md5 = md5.hexdigest()
-            self.login(uname, md5)
             self.username = uname
+            self.login(uname, md5)
         elif uname == "guest": #Checks if Guest Session
             self.username = "guest"
             self.guestSession = True
@@ -71,10 +71,9 @@ class session:
         if self.securityToken == "guest":
             raise exceptions.invalidAuthenticationException()
         self.userID = parser.userIDParser(content)
-        print (self.userID)
         usercontent = parser.parser(self, "http://www.elitepvpers.com/forum/member.php?userid=" + self.userID)
         self.ranks = parser.rankParser(usercontent)
-        print (self.ranks)
+        logging.info("User-Session created: {0}:{1}:{2}".format(self.username, self.userID, self.ranks))
 
     def logout(self):
         requests.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken, headers=self.headers, cookies=self.cookieJar)
