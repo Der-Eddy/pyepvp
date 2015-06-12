@@ -21,6 +21,7 @@ print(shoutbox.messages[1])
 for i in shoutbox.messages:
     print(i["username"])
 print("--------------")
+pyepvp.shoutbox.send(eddy, "I'm a bot", "english")
 eddy.logout()
 
 guest = pyepvp.session.session("guest")
