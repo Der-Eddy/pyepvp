@@ -52,3 +52,7 @@ class requestFailedException(Exception):
 class requestDatabaseException(Exception):
     def __init__(self):
         super(requestDatabaseException, self).__init__("Elitepvpers.com Database not reachable (Backup Time?)" + systemInfo())
+
+class cloudflareProtectionException(Exception):
+    def __init__(self):
+        super(cloudflareProtectionException, self).__init__("Cloudflare Protection active (DDoS?)" + systemInfo())

@@ -9,6 +9,8 @@ def parser(session, url):
     logging.debug("Size of " + url + ": " + str(len(r.content)))
     if regexp.htmlTag("title", r.content) == "Database Error":
         raise exceptions.requestDatabaseException()
+    if regexp.htmlTag("title", r.content) == "Just a moment...":
+        raise exceptions.cloudflareProtectionException()
     content = r.content.decode('iso-8859-1')
     content = str.replace(str(content), "&amp;", "&")
     content = str.replace(str(content), "&nbsp;", "")
@@ -18,6 +20,7 @@ def parser(session, url):
 
 def getSections(session):
     content = parser(session, "http://www.elitepvpers.com/forum/main/announcement-board-rules-signature-rules.html")
+    debug(content)
     match = re.findall("value=\"(\d+)\".+\">\s+(\D+)<\/option>", content)
     return forumList(match)
 

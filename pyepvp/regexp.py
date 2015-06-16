@@ -10,7 +10,11 @@ def match(pattern, string):
         return match
 
 def htmlTag(tag, string):
-    return match("<{0}>\s+(.+)\s+<\/{0}>".format(tag), string)
+    nlineMatch = match("<{0}>\s+(.+)\s+<\/{0}>".format(tag), string)
+    if len(nlineMatch) > 0:
+        return nlineMatch
+    else:
+        return match("<{0}>(.+)<\/{0}>".format(tag), string)
 
 
 def debug(file, text):
