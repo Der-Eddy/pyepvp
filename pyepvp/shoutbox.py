@@ -1,6 +1,5 @@
 import re
 import logging
-import requests
 from . import exceptions
 from . import parser
 from . import regexp
@@ -17,8 +16,7 @@ def send(session, message, channel="general"):
             "securitytoken": session.securityToken
         }
     print (session.securityToken)
-    r = requests.post("http://www.elitepvpers.com/forum/mgc_cb_evo_ajax.php", data=params, headers=session.headers, cookies=session.cookieJar)
-    print (r.content)
+    print (session.sess.post("http://www.elitepvpers.com/forum/mgc_cb_evo_ajax.php", data=params).content)
 
 class shoutbox:
     topChatter = []

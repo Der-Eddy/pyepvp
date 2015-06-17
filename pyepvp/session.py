@@ -1,4 +1,4 @@
-import requests
+import requests, cfscrape
 import hashlib
 import time
 import platform
@@ -14,16 +14,18 @@ class session:
     with open(os.path.abspath("pyepvp/about.json"), "r") as file:
         about = json.load(file)
     userAgent = system.lower() + ":" + about["appID"] + "." + about["name"] + ":" + about["version"] + " (by " + about["author"] + ")"
-    headers = {
+    sess = requests.session()
+    sess.headers = {
         "User-Agent" : userAgent,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
         "Accept-Language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4",
         "Accept-Encoding": "gzip,deflate",
         "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
     }
+    sess.mount("http://", cfscrape.CloudflareAdapter())
+    sess.mount("https://", cfscrape.CloudflareAdapter())
     username = ""
     guestSession = False
-    cookieJar = ""
     securityToken = ""
     secretWord = None
     userID = ""
@@ -62,9 +64,7 @@ class session:
             "security_token": "guest"
         }
 
-        r = requests.post(loginnurl, data=params, headers=self.headers)
-        
-        self.cookieJar = r.cookies
+        r = self.sess.post(loginnurl, data=params)
 
         content = parser.parser(self, "http://www.elitepvpers.com/forum/usercp.php")
         self.securityToken = parser.securityTokenParser(content)
@@ -76,4 +76,4 @@ class session:
         logging.info("User-Session created: {0}:{1}:{2}".format(self.username, self.userID, self.ranks))
 
     def logout(self):
-        requests.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken, headers=self.headers, cookies=self.cookieJar)
+        self.sess.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken)

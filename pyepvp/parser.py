@@ -1,16 +1,14 @@
-import requests
+import requests, cfscrape
 import re
 import logging
 from . import regexp
 from . import exceptions
 
 def parser(session, url):
-    r = requests.get(url + "?langid=1", headers=session.headers, cookies=session.cookieJar)
+    r = session.sess.get(url + "?langid=1")
     logging.debug("Size of " + url + ": " + str(len(r.content)))
     if regexp.htmlTag("title", r.content) == "Database Error":
         raise exceptions.requestDatabaseException()
-    if regexp.htmlTag("title", r.content) == "Just a moment...":
-        raise exceptions.cloudflareProtectionException()
     content = r.content.decode('iso-8859-1')
     content = str.replace(str(content), "&amp;", "&")
     content = str.replace(str(content), "&nbsp;", "")
