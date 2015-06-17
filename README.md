@@ -10,7 +10,7 @@ Currently in planning phase, let me know if you have any idea for my project!
 Requirements
 -------------
 
-Needs some lib packages, easily installed with pip
+First of all, you'll need Python >3.4 and some Packages from PyPI, easily installed with pip:
 
     pip install requests
     pip install PyExecJS
