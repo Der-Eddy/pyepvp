@@ -46,7 +46,6 @@ class session:
         elif uname == "guest": #Checks if Guest Session
             self.username = "guest"
             self.guestSession = True
-            self.cookieJar = requests.cookies.RequestsCookieJar()
             self.securityToken = "guest"
         else: 
             return "No PW given"

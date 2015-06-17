@@ -13,6 +13,11 @@ Requirements
 Needs some lib packages, easily installed with pip
 
     pip install requests
+    pip install PyExecJS
+    pip install cfscrape
+
+You will also need to install NodeJS, if you want to bypass the Cloudflare Check
+Install Instructions can be found [here](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions)
 
 
 Samples and Usage
