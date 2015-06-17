@@ -19,7 +19,7 @@ shoutbox = pyepvp.shoutbox.shoutbox(eddy)
 print("--------------")
 print(shoutbox.messages[1])
 for i in shoutbox.messages:
-    print(i["username"])
+    print(i["username"] + " (" + i["usercolor"] + "): " + i["message"])
 print("--------------")
 #pyepvp.shoutbox.send(eddy, "Ich bin ein Bot")
 eddy.logout()
