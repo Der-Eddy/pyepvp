@@ -29,6 +29,8 @@ class shoutbox:
     def getShoutbox(self, session, site=[1, 1], channel="general"):
         exceptions.hasPermissions(session.ranks, exceptions.premiumUsers)
         messagesList = []
+        pHex = re.compile("color:(\S+)>(.*?)<\/span>")
+        pName = re.compile("color:(\S+)\">(.*?)<\/span>")
         for s in range(site[1], site[0] - 1, -1):
             content = parser.parser(session, "http://www.elitepvpers.com/forum/mgc_cb_evo.php?do=view_archives&page=" + str(s) + "?langid=1")
             content = regexp.match(re.compile("<div class=\"cw1hforum\">(.+)<\/table>", re.DOTALL), content)
@@ -38,8 +40,9 @@ class shoutbox:
                     rank = "black"
                     username = shout[2]
                 else:
-                    p = re.compile("color:(\S+)>(.+)<\/span>")
-                    matches = re.search(p, shout[2])
+                    matches = re.search(pHex, shout[2])
+                    if matches == None:
+                        matches = re.search(pName, shout[2])
                     rank = matches.group(1)
                     username = matches.group(0)
                 messageDict = {"time": shout[0], "userid": shout[1], "username": username, "usercolor": rank, "message": shout[3]}

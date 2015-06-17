@@ -5,7 +5,7 @@ def match(pattern, string):
     try:
         match = match.group(1)
     except AttributeError:
-        match = ""
+            match = ""
     finally:
         return match
 

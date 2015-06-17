@@ -1,6 +1,7 @@
 import requests, cfscrape
 import re
 import logging
+from html import unescape
 from . import regexp
 from . import exceptions
 
@@ -10,11 +11,7 @@ def parser(session, url):
     if regexp.htmlTag("title", r.content) == "Database Error":
         raise exceptions.requestDatabaseException()
     content = r.content.decode('iso-8859-1')
-    content = str.replace(str(content), "&amp;", "&")
-    content = str.replace(str(content), "&nbsp;", "")
-    content = str.replace(str(content), "&lt;", "")
-    content = str.replace(str(content), "&gt;", "")
-    return content
+    return unescape(content)
 
 def getSections(session):
     content = parser(session, "http://www.elitepvpers.com/forum/main/announcement-board-rules-signature-rules.html")
