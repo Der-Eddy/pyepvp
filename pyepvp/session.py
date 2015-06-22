@@ -51,7 +51,7 @@ class session:
             return "No PW given"
 
     def login(self, uname, md5):
-        loginnurl = "http://www.elitepvpers.com/forum/login.php?do=login" + self.paramsGet
+        loginnurl = "https://www.elitepvpers.com/forum/login.php?do=login" + self.paramsGet
 
         params = {
             "do": "login",
@@ -63,7 +63,7 @@ class session:
             "security_token": "guest"
         }
 
-        r = self.sess.post(loginnurl, data=params)
+        r = self.sess.post(loginnurl, data=params, verify=True)
 
         content = parser.parser(self, "http://www.elitepvpers.com/forum/usercp.php")
         self.securityToken = parser.securityTokenParser(content)

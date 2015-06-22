@@ -2,7 +2,13 @@ import pyepvp.session
 import pyepvp.parser
 import pyepvp.shoutbox
 import re
-import logging
+import logging, sys
+
+def safeprint(s):
+    try:
+        print(s)
+    except UnicodeEncodeError:
+        print(s.encode('utf8').decode(sys.stdout.encoding))
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 with open("passwd.txt") as txt:
@@ -19,9 +25,9 @@ shoutbox = pyepvp.shoutbox.shoutbox(eddy)
 print("--------------")
 print(shoutbox.messages[1])
 for i in shoutbox.messages:
-    print(i["username"] + " (" + i["usercolor"] + "): " + i["message"])
+    safeprint((i["username"] + " (" + i["usercolor"] + "): " + i["message"]).encode("utf-8"))
 print("--------------")
-#pyepvp.shoutbox.send(eddy, "Ich bin ein Bot")
+#pyepvp.shoutbox.send(eddy, "Ich bin ein Бot")
 eddy.logout()
 
 guest = pyepvp.session.session("guest")
