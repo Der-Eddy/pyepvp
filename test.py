@@ -1,6 +1,7 @@
 import pyepvp.session
 import pyepvp.parser
 import pyepvp.shoutbox
+import pyepvp.privatemessages
 import re
 import logging, sys
 
@@ -28,6 +29,8 @@ for i in shoutbox.messages:
     safeprint((i["username"] + " (" + i["usercolor"] + "): " + i["message"]).encode("utf-8"))
 print("--------------")
 #pyepvp.shoutbox.send(eddy, "Ich bin ein Бot")
+pm = pyepvp.privatemessages.privatemessages(eddy, "Test", "läuft bei dir", "Der-Eddy")
+pm.send()
 eddy.logout()
 
 guest = pyepvp.session.session("guest")

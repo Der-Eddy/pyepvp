@@ -34,8 +34,7 @@ def send(session, message, channel="general"):
             "s": "", 
             "securitytoken": session.securityToken
         }
-    print (session.securityToken)
-    print (session.sess.post("http://www.elitepvpers.com/forum/mgc_cb_evo_ajax.php", data=params).content)
+    session.sess.post("http://www.elitepvpers.com/forum/mgc_cb_evo_ajax.php", data=params)
 
 class shoutbox:
     topChatter = []
@@ -68,7 +67,7 @@ class shoutbox:
                     username = matches.group(2)
                 messageDict = {"time": shout[0], "userid": shout[1], "username": username, "usercolor": rank, "message": shout[3]}
                 messagesList.append(messageDict)
-            if len(messagesList) < 16:
+            if len(messagesList) < 15:
                 logging.warn("List of shouts to short!")
                 parser.debug(content)
         return messagesList
