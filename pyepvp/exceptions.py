@@ -14,10 +14,11 @@ guest = ["guest"]
 moderators = ["coadmin", "globalmod", "moderator"]
 editorial = ["editor", "translator", "podcaster", "broadcaster", "eventplanner"]
 undergroundUsers = ["level3", "level2"]
+formerRanks = ["founder", "formerstaff", "formervolunteer"]
 premiumUsers = ["premium"] + moderators + undergroundUsers + editorial
 
-def hasPermissions(ranks, group):
-    if ranks == user and group == guest:
+def hasPermissions(ranks, group=guest):
+    if ranks in guest:
         insufficientAccessException(guest=True)
     hasRight = False
     for rank in ranks:
@@ -37,6 +38,10 @@ class insufficientAccessException(Exception):
         else:
             super(insufficientAccessException, self).__init__("You will need atleast one of " + str(neededRanks) + " ranks to use that" + systemInfo())
 
+class pyepvpBaseException(Exception):
+    def __init__(self, message="Exception? Something went wrong"):
+        super(emptyObjectException, self).__init__(message + systemInfo())
+
 class emptyObjectException(Exception):
     def __init__(self, objectName):
         super(emptyObjectException, self).__init__("Empty Object \"" + objectName + "\" given (Parsing Error?)" + systemInfo())
@@ -51,4 +56,4 @@ class requestFailedException(Exception):
 
 class requestDatabaseException(Exception):
     def __init__(self):
-        super(requestDatabaseException, self).__init__("Elitepvpers.com Database not reachable (Backup Time?)" + systemInfo())
+        super(requestDatabaseException, self).__init__("Elitepvpers.com Database not reachable (Backup Time 4:30?)" + systemInfo())

@@ -59,6 +59,8 @@ target/
 
 passwd.txt
 debug
+debug.html
 pyepvp/debug
 logo.psd
 modfe.py
+modcp.py

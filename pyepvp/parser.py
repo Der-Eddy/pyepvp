@@ -1,26 +1,34 @@
-import requests, cfscrape
+import requests
+#import cfscrape
 import re
 import logging
+import os, sys
 from html import unescape
 from . import regexp
 from . import exceptions
 
-def parser(session, url):
-    r = session.sess.get(url + "?langid=1")
+def parser(session, url, debugFlag=False):
+    if session == "debug":
+        r = requests.get(url + "?langid=1")
+    else:
+        r = session.sess.get(url + "?langid=1")
     logging.debug("Size of " + url + ": " + str(len(r.content)))
     if regexp.htmlTag("title", r.content) == "Database Error":
         raise exceptions.requestDatabaseException()
     content = r.content.decode('iso-8859-1')
-    return unescape(content)
+    content = unescape(content)
+    if debugFlag == True:
+        debug(content)
+    return content
 
 def getSections(session):
-    content = parser(session, "http://www.elitepvpers.com/forum/main/announcement-board-rules-signature-rules.html")
-    debug(content)
+    content = parser(session, "https://www.elitepvpers.com/forum/main/announcement-board-rules-signature-rules.html")
     match = re.findall("value=\"(\d+)\".+\">\s+(\D+)<\/option>", content)
     return forumList(match)
 
 def rankParser(content):
     ranks = re.findall("teamicons\/relaunch\/(\w+).png", content)
+    ranks += ["user"]
     return ranks
 
 def securityTokenParser(content):
@@ -32,8 +40,20 @@ def userIDParser(content):
     return userID
 
 def debug(content):
-    with open("debug", 'wb') as file_:
+    with open(os.path.dirname(os.path.abspath(sys.argv[0])) + "/debug.html", 'wb') as file_:
         file_.write(content.encode("utf-8"))
+
+def htmlescape(text):
+    #text = (text).decode('utf-8')
+
+    from html.entities import codepoint2name
+    d = dict((unichr(code), u'&%s;' % name) for code,name in codepoint2name if code!=38) # exclude "&"
+    if u"&" in text:
+        text = text.replace(u"&", u"&amp;")
+    for key, value in d.iteritems():
+        if key in text:
+            text = text.replace(key, value)
+    return text
 
 class forumList:
     forumList = []

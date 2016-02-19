@@ -1,9 +1,11 @@
-import requests, cfscrape
+import requests
+#import cfscrape
 import hashlib
 import time
 import platform
 import json
 import os
+import sys
 import logging
 from . import regexp
 from . import exceptions
@@ -11,7 +13,7 @@ from . import parser
 
 class session:
     system = platform.system()
-    with open(os.path.abspath("pyepvp/about.json"), "r") as file:
+    with open(os.path.abspath(os.path.dirname(os.path.abspath(sys.argv[0])) + "/pyepvp/about.json"), "r") as file:
         about = json.load(file)
     userAgent = system.lower() + ":" + about["appID"] + "." + about["name"] + ":" + about["version"] + " (by " + about["author"] + ")"
     sess = requests.session()
@@ -22,8 +24,8 @@ class session:
         "Accept-Encoding": "gzip,deflate",
         "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
     }
-    sess.mount("http://", cfscrape.CloudflareAdapter())
-    sess.mount("https://", cfscrape.CloudflareAdapter())
+    #sess.mount("http://", cfscrape.CloudflareAdapter())
+    #sess.mount("https://", cfscrape.CloudflareAdapter())
     username = ""
     guestSession = False
     securityToken = ""
@@ -47,7 +49,7 @@ class session:
             self.username = "guest"
             self.guestSession = True
             self.securityToken = "guest"
-        else: 
+        else:
             return "No PW given"
 
     def login(self, uname, md5):
@@ -59,20 +61,20 @@ class session:
             "vb_login_md5password_utf": md5,
             "s": "",
             "cookieuser": "1",
-            "vb_login_username": uname, 
+            "vb_login_username": uname,
             "security_token": "guest"
         }
 
         r = self.sess.post(loginnurl, data=params, verify=True)
 
-        content = parser.parser(self, "http://www.elitepvpers.com/forum/usercp.php")
+        content = parser.parser(self, "https://www.elitepvpers.com/forum/usercp.php")
         self.securityToken = parser.securityTokenParser(content)
         if self.securityToken == "guest":
             raise exceptions.invalidAuthenticationException()
         self.userID = parser.userIDParser(content)
-        usercontent = parser.parser(self, "http://www.elitepvpers.com/forum/member.php?userid=" + self.userID)
+        usercontent = parser.parser(self, "https://www.elitepvpers.com/forum/member.php?userid=" + self.userID)
         self.ranks = parser.rankParser(usercontent)
         logging.info("User-Session created: {0}:{1}:{2}".format(self.username, self.userID, self.ranks))
 
     def logout(self):
-        self.sess.get("http://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken)
+        self.sess.get("https://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken)
