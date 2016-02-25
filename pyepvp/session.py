@@ -1,5 +1,5 @@
 import requests
-#import cfscrape
+import cfscrape
 import xmlrpc.client
 import hashlib
 import time
@@ -26,8 +26,8 @@ class session:
         "Accept-Encoding": "gzip,deflate",
         "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
     }
-    #sess.mount("http://", cfscrape.CloudflareAdapter())
-    #sess.mount("https://", cfscrape.CloudflareAdapter())
+    sess.mount("http://", cfscrape.CloudflareAdapter())
+    sess.mount("https://", cfscrape.CloudflareAdapter())
     username = ""
     guestSession = False
     securityToken = ""

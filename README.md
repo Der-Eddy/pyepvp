@@ -10,13 +10,13 @@ Currently in planning phase, let me know if you have any idea for my project!
 Requirements
 -------------
 
-First of all, you'll need Python >3.4 and some Packages from PyPI, easily installed with pip:
+First of all, you'll need Python >3.5 and some Packages from PyPI, easily installed with pip:
 
     pip install requests
     pip install PyExecJS
     pip install cfscrape
 
-You will also need to install NodeJS, if you want to bypass the Cloudflare Check  
+(OPTIONAL)You will also need to install NodeJS, if you want to bypass the Cloudflare Check  
 Install Instructions can be found [here](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions)
 
 
@@ -41,21 +41,21 @@ ToDo
 
 License
 -------------
-  
+
     The MIT License (MIT)
-    
-    Copyright (c) 2015
-    
+
+    Copyright (c) 2015 - 2016 Der-Eddy
+
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
     in the Software without restriction, including without limitation the rights
     to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
     copies of the Software, and to permit persons to whom the Software is
     furnished to do so, subject to the following conditions:
-    
+
     The above copyright notice and this permission notice shall be included in all
     copies or substantial portions of the Software.
-    
+
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
