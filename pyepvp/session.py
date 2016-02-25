@@ -1,5 +1,6 @@
 import requests
 #import cfscrape
+import xmlrpc.client
 import hashlib
 import time
 import platform
@@ -10,6 +11,7 @@ import logging
 from . import regexp
 from . import exceptions
 from . import parser
+from . import tapatalk
 
 class session:
     system = platform.system()
@@ -52,6 +54,10 @@ class session:
         else:
             return "No PW given"
 
+    def __del__(self):
+        #self.logout()
+        pass
+
     def login(self, uname, md5):
         loginnurl = "https://www.elitepvpers.com/forum/login.php?do=login" + self.paramsGet
 
@@ -76,5 +82,8 @@ class session:
         self.ranks = parser.rankParser(usercontent)
         logging.info("User-Session created: {0}:{1}:{2}".format(self.username, self.userID, self.ranks))
 
+        self.tapatalk = tapatalk.tapatalk(uname, md5)
+
     def logout(self):
         self.sess.get("https://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken)
+        self.tapatalk.logout()

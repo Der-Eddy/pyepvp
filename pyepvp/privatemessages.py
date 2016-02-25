@@ -60,7 +60,7 @@ class privatemessages:
         elif isinstance(folder, int):
             self.folder = str(folder)
         else:
-            raise pyepvpBaseException('Provide a valid foldername (Inbox or Sent) or folderid')
+            raise exceptions.pyepvpBaseException('Provide a valid foldername (Inbox or Sent) or folderid')
         self.site = str(site)
         self.url = 'https://www.elitepvpers.com/forum/private.php?s=&pp=50&folderid=' + self.folder + '&page=' + self.site
         self.getPMs()
