@@ -45,8 +45,14 @@ class shoutbox:
                     matches = re.search(pHex, shout[2])
                     if matches == None:
                         matches = re.search(pName, shout[2])
-                    rank = matches.group(1)
-                    username = matches.group(2)
+                    try:
+                        rank = matches.group(1)
+                    except AttributeError:
+                        rank = "user"
+                    try:
+                        username = matches.group(2)
+                    except AttributeError:
+                        username = "undefined"
                 messageDict = {"time": shout[0], "userid": shout[1], "username": username, "usercolor": rank, "message": shout[3]}
                 messagesList.append(messageDict)
             if len(messagesList) < 15:

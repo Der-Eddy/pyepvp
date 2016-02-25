@@ -34,6 +34,7 @@ pm = pyepvp.privatemessages.privatemessage(eddy, 'Test', 'läuft bei dir\r\nyea'
 #pm.send()
 print('--------------')
 pms = pyepvp.privatemessages.privatemessages(eddy)
+print(pms.pms)
 print('--------------')
 thread = pyepvp.threads.thread(eddy, 'https://www.elitepvpers.com/forum/premium-main/3734972-der-l-ngste-e-pvp-premium-thread-xxii.html')
 #print(thread.content)

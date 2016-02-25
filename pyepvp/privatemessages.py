@@ -50,7 +50,7 @@ class privatemessage:
         self.session.sess.post("https://www.elitepvpers.com/forum/private.php?do=insertpm&pmid=", data=params)
         #recipients=Der-Eddy&bccrecipients=&title=L%E4uft&message=L%E4uft+bei%0D%0Adir%21+%3AD&wysiwyg=0&iconid=0&s=&securitytoken=&do=insertpm&pmid=&forward=&sbutton=Submit+Message&savecopy=1&signature=1&parseurl=1
 
-class privatemessages:
+class privatemessagesOLD:
     def __init__(self, session, folder=0, site=0):
         self.session = session
         if folder == 'Inbox' or folder == 'inbox':
@@ -79,3 +79,23 @@ class privatemessages:
             print (pm[2])
 
 # <td class="alt2">(.*?)<\/td>.*\n.*\n.*\n<span style="float:right" class="smallfont">(\S+)<\/span>\n<a rel="nofollow" href="private\.php\?do=showpm&amp;pmid=(\d+)">(.*?)<\/a>\n.*\n.*\n.*class="time">(\S+)<\/span>\n.*location='members\/(\d+)-.*">(.*?)<\/span>
+
+class privatemessages:
+    def __init__(self, session, folder=0):
+        self.session = session
+        if folder == 'Inbox' or folder == 'inbox':
+            self.folder = '0'
+        elif folder == 'Sent' or folder == 'sent':
+            self.folder = '1'
+        elif isinstance(folder, int):
+            self.folder = str(folder)
+        else:
+            raise exceptions.pyepvpBaseException('Provide a valid foldername (Inbox or Sent) or folderid')
+        self.getPMs()
+
+    def getPMs(self):
+        exceptions.hasPermissions(self.session.ranks, exceptions.user)
+        pms = self.session.tapatalk.proxy.get_box(self.folder, 0,  50)
+        self.unread = pms["total_unread_count"]
+        self.messagesCount = pms["total_message_count"]
+        self.pms = pms["list"]

@@ -29,5 +29,7 @@ class tapatalk:
             logging.info("Tapatalk-Session created")
 
     def logout(self):
-        #self.proxy.logout_user()
-        pass
+        try:
+            self.proxy.logout_user()
+        except Exception:
+            pass
