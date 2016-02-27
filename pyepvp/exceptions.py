@@ -42,6 +42,10 @@ class pyepvpBaseException(Exception):
     def __init__(self, message="Exception? Something went wrong"):
         super(emptyObjectException, self).__init__(message + systemInfo())
 
+class tbmSecretwordException(Exception):
+    def __init__(self, methodName):
+        super(emptyObjectException, self).__init__("No Secretword defined for \"" + methodName + "\" method" + systemInfo())
+
 class emptyObjectException(Exception):
     def __init__(self, objectName):
         super(emptyObjectException, self).__init__("Empty Object \"" + objectName + "\" given (Parsing Error?)" + systemInfo())

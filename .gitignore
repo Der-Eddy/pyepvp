@@ -58,6 +58,7 @@ target/
 
 
 passwd.txt
+secretword.txt
 debug
 debug.html
 pyepvp/debug

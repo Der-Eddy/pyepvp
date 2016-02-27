@@ -38,8 +38,6 @@ class session:
 
     def __init__(self, uname, passwd=None, md5bool=False, secretWord=None):
         logging.info("Running on" + exceptions.systemInfo())
-        if secretWord is not None:
-            self.secretWord = secretWord
         if passwd is not None: #Checks if User Session
             if md5bool == True:
                 md5 = passwd
@@ -47,6 +45,8 @@ class session:
                 md5 = hashlib.md5(passwd.encode("utf-8"));md5 = md5.hexdigest()
             self.username = uname
             self.login(uname, md5)
+            if secretWord is not None:
+                self.secretWord = secretWord
         elif uname == "guest": #Checks if Guest Session
             self.username = "guest"
             self.guestSession = True

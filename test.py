@@ -3,6 +3,7 @@ import pyepvp.parser
 import pyepvp.shoutbox
 import pyepvp.privatemessages
 import pyepvp.threads
+import pyepvp.tbm
 import re
 import logging, sys, os
 
@@ -16,28 +17,40 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 with open(os.path.dirname(os.path.abspath(sys.argv[0])) + '/passwd.txt') as txt:
     passwd = txt.read()
 #passwd = 'my md5 hash password'
-secretWord = 'Super Secret Word'
+with open(os.path.dirname(os.path.abspath(sys.argv[0])) + '/secretword.txt') as txt:
+    secretWord = txt.read()
+#secretWord = 'Super Secret Word'
 eddy = pyepvp.session.session('Dere-Eddy', passwd, True, secretWord)
 print (eddy.securityToken)
+
 forumList = pyepvp.parser.getSections(eddy)
 print(forumList.getByID(205))
 print(forumList.getByName('e*pvp News'))
 print(forumList.isIn(('205', 'e*pvp News')))
-shoutbox = pyepvp.shoutbox.shoutbox(eddy)
+
 print('--------------')
+shoutbox = pyepvp.shoutbox.shoutbox(eddy)
 #print(shoutbox.messages[1])
 for i in shoutbox.messages:
     safeprint((i['username'] + ' (' + i['usercolor'] + '): ' + i['message']).encode('utf-8'))
 print('--------------')
 #pyepvp.shoutbox.send(eddy, 'Ich bin ein Бot')
+
 pm = pyepvp.privatemessages.privatemessage(eddy, 'Test', 'läuft bei dir\r\nyea', 'Dere-Eddy')
 #pm.send()
-print('--------------')
+print('Unread Messages:')
 pms = pyepvp.privatemessages.privatemessages(eddy)
-print(pms.pms)
+for message in pms.pms:
+    if message['msg_state'] == 1:
+        print(message)
 print('--------------')
-thread = pyepvp.threads.thread(eddy, 'https://www.elitepvpers.com/forum/premium-main/3734972-der-l-ngste-e-pvp-premium-thread-xxii.html')
+
+transactions = pyepvp.tbm.tbm(eddy)
+print(transactions.retrieveTransactions('received'))
+
+#thread = pyepvp.threads.thread(eddy, 'https://www.elitepvpers.com/forum/premium-main/3734972-der-l-ngste-e-pvp-premium-thread-xxii.html')
 #print(thread.content)
+
 eddy.logout()
 
 guest = pyepvp.session.session('guest')
