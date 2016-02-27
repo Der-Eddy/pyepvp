@@ -1,0 +1,54 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "A Python API based on the idea of \n.NET epvpapi\n\nCurrently in planning phase, let me know if you have any idea for my project!\n\n\nRequirements\n\n\nNeeds some lib packages, easily installed with pip\n\n\npip install requests\npip install beautifulsoup4\n\n\n\nSamples and Usage\n\n\nFor that, you should currently take a look at \ntest.py\n  \n\n\nimport pyepvp.session\neddy = pyepvp.session.session(\"Der-Eddy\", passwordmd5hash, True, secretWord)\nprint (eddy.securityToken)\neddy.logout()\nguest = pyepvp.session.session(\"guest\")\nprint (guest.securityToken)\n\n\n\nToDo\n\n\n\n\nAdd more functionality (TBM, Thread/Post methods and such)\n\n\nCreate a documentation\n\n\nMake a python package out of it (So you can install it through pip)\n\n\n\n\nLicense\n\n\nThe MIT License (MIT)\n\nCopyright (c) 2015\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+            "title": "Home"
+        },
+        {
+            "location": "/#requirements",
+            "text": "Needs some lib packages, easily installed with pip  pip install requests\npip install beautifulsoup4",
+            "title": "Requirements"
+        },
+        {
+            "location": "/#samples-and-usage",
+            "text": "For that, you should currently take a look at  test.py     import pyepvp.session\neddy = pyepvp.session.session(\"Der-Eddy\", passwordmd5hash, True, secretWord)\nprint (eddy.securityToken)\neddy.logout()\nguest = pyepvp.session.session(\"guest\")\nprint (guest.securityToken)",
+            "title": "Samples and Usage"
+        },
+        {
+            "location": "/#todo",
+            "text": "Add more functionality (TBM, Thread/Post methods and such)  Create a documentation  Make a python package out of it (So you can install it through pip)",
+            "title": "ToDo"
+        },
+        {
+            "location": "/#license",
+            "text": "The MIT License (MIT)\n\nCopyright (c) 2015\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+            "title": "License"
+        },
+        {
+            "location": "/session/",
+            "text": "Creating a session\n\n\nCreating a session is required for almost every single function in the library. By creating the authenticated session, you  provide login information that is used for logging into your elitepvpers account. Cookies get stored for further usage and are valid until you destroy the session or your scripts ends.\n\n\nYou can also use a guest session with the username \nguest\n. However, not every function will work with a guest session (e.g. Shoutbox, posting in a topic or TBM functions and such).\n\n\nCreating a user session object and using it\n\n\nTo create a session simple import the \npyepvp.session\n module and use the \nsession\n function\n\n\nimport pyepvp.session\neddy = pyepvp.session.session(\"Der-Eddy\", passwordmd5hash, True, superSecretWord)\n\n\n\nEverything but the username is optional, you can also use either your password or a md5 hash of your passwort by using \nmd5bool=True\n.  \n\n\nOther Example\n\n\neddy = pyepvp.session.session(\"Der-Eddy\", normalPassword)\n\n\n\nHowever, keep in mind if you don't set a secret world then you can't use specific TBM functions.\n\n\nCreating a guest session\n\n\nFor that, simply use as a username \nguest\n\n\nguest = pyepvp.session.session(\"guest\")\n\n\n\nGetting Started\n\n\n...",
+            "title": "Session"
+        },
+        {
+            "location": "/session/#creating-a-session",
+            "text": "Creating a session is required for almost every single function in the library. By creating the authenticated session, you  provide login information that is used for logging into your elitepvpers account. Cookies get stored for further usage and are valid until you destroy the session or your scripts ends.  You can also use a guest session with the username  guest . However, not every function will work with a guest session (e.g. Shoutbox, posting in a topic or TBM functions and such).",
+            "title": "Creating a session"
+        },
+        {
+            "location": "/session/#creating-a-user-session-object-and-using-it",
+            "text": "To create a session simple import the  pyepvp.session  module and use the  session  function  import pyepvp.session\neddy = pyepvp.session.session(\"Der-Eddy\", passwordmd5hash, True, superSecretWord)  Everything but the username is optional, you can also use either your password or a md5 hash of your passwort by using  md5bool=True .    Other Example  eddy = pyepvp.session.session(\"Der-Eddy\", normalPassword)  However, keep in mind if you don't set a secret world then you can't use specific TBM functions.",
+            "title": "Creating a user session object and using it"
+        },
+        {
+            "location": "/session/#creating-a-guest-session",
+            "text": "For that, simply use as a username  guest  guest = pyepvp.session.session(\"guest\")",
+            "title": "Creating a guest session"
+        },
+        {
+            "location": "/session/#getting-started",
+            "text": "...",
+            "title": "Getting Started"
+        }
+    ]
+}

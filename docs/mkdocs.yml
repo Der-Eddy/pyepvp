@@ -1,0 +1,4 @@
+site_name: pyepvp
+pages:
+- Home: index.md
+- Session: session.md
