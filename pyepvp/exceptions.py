@@ -50,6 +50,10 @@ class emptyObjectException(Exception):
     def __init__(self, objectName):
         super(emptyObjectException, self).__init__("Empty Object \"" + objectName + "\" given (Parsing Error?)" + systemInfo())
 
+class noAuthenticationException(Exception):
+    def __init__(self):
+        super(noAuthenticationException, self).__init__("Provide a username and password" + systemInfo())
+
 class invalidAuthenticationException(Exception):
     def __init__(self):
         super(invalidAuthenticationException, self).__init__("Login doesn't work (Wrong Username or Password?)" + systemInfo())

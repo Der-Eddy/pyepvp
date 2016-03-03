@@ -46,7 +46,10 @@ for message in pms.pms:
 print('--------------')
 
 transactions = pyepvp.tbm.tbm(eddy)
-print(transactions.retrieveTransactions('received'))
+tbmJSON = transactions.retrieveTransactions('received')
+for i in tbmJSON:
+    if int(i['amount']) >= 30 and i['note'] == 'Katze':
+        print(i)
 
 #thread = pyepvp.threads.thread(eddy, 'https://www.elitepvpers.com/forum/premium-main/3734972-der-l-ngste-e-pvp-premium-thread-xxii.html')
 #print(thread.content)

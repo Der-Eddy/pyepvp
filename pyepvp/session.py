@@ -18,6 +18,7 @@ class session:
     with open(os.path.abspath(os.path.dirname(os.path.abspath(sys.argv[0])) + "/pyepvp/about.json"), "r") as file:
         about = json.load(file)
     userAgent = system.lower() + ":" + about["appID"] + "." + about["name"] + ":" + about["version"] + " (by " + about["author"] + ")"
+    solaire = about["author"]
     sess = requests.session()
     sess.headers = {
         "User-Agent" : userAgent,
@@ -52,7 +53,7 @@ class session:
             self.guestSession = True
             self.securityToken = "guest"
         else:
-            return "No PW given"
+            raise exceptions.noAuthenticationException()
 
     def __del__(self):
         #self.logout()
