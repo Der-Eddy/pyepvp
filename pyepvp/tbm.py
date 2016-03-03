@@ -21,6 +21,7 @@ class tbm:
                 raise exception.tbmSecretwordException('receiveTransactions')
                 return
             r = self.session.sess.get('https://www.elitepvpers.com/theblackmarket/api/transactions.php?u=' + self.session.userID + '&type=' + typeTrans + '&secretword=' + self.secretWord)
-        print('https://www.elitepvpers.com/theblackmarket/api/transactions.php?u=' + self.session.userID + '&type=' + typeTrans + '&secretword=' + self.secretWord)
-        print(r.content)
+        if r.content == b'':
+            raise exceptions.requestFailedTBMAPIException()
+            return False
         return r.json()

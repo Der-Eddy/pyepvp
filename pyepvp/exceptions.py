@@ -40,11 +40,11 @@ class insufficientAccessException(Exception):
 
 class pyepvpBaseException(Exception):
     def __init__(self, message="Exception? Something went wrong"):
-        super(emptyObjectException, self).__init__(message + systemInfo())
+        super(pyepvpBaseException, self).__init__(message + systemInfo())
 
 class tbmSecretwordException(Exception):
     def __init__(self, methodName):
-        super(emptyObjectException, self).__init__("No Secretword defined for \"" + methodName + "\" method" + systemInfo())
+        super(tbmSecretwordException, self).__init__("No Secretword defined for \"" + methodName + "\" method" + systemInfo())
 
 class emptyObjectException(Exception):
     def __init__(self, objectName):
@@ -53,6 +53,10 @@ class emptyObjectException(Exception):
 class invalidAuthenticationException(Exception):
     def __init__(self):
         super(invalidAuthenticationException, self).__init__("Login doesn't work (Wrong Username or Password?)" + systemInfo())
+
+class requestFailedTBMAPIException(Exception):
+    def __init__(self):
+        super(requestFailedTBMAPIException, self).__init__("Could not retrieve from TBM API (Wrong Secretword?)" + systemInfo())
 
 class requestFailedException(Exception):
     def __init__(self):
