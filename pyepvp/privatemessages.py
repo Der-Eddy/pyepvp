@@ -48,7 +48,8 @@ class privatemessage:
             "parseurl": "1",
             "securitytoken": self.session.securityToken
         }
-        params = "recipients=" + self.recipients + "&bccrecipients=" + self.bccrecipients + "&title=" + self.title + "&message=" + self.message + "&wysiwyg=0&iconid=" + self.icon + "&s=&securitytoken=" + self.session.securityToken + "&do=insertpm&pmid=&forward=&sbutton=Submit+Message&savecopy=" + savecopy + "&signature=1&parseurl=1"
+        #params = "recipients=" + self.recipients + "&bccrecipients=" + self.bccrecipients + "&title=" + self.title + "&message=" + self.message + "&wysiwyg=0&iconid=" + self.icon + "&s=&securitytoken=" + self.session.securityToken + "&do=insertpm&pmid=&forward=&sbutton=Submit+Message&savecopy=" + savecopy + "&signature=1&parseurl=1"
+        params = parser.dicttostr(paramsDict)
         logging.info(params)
         r = self.session.sess.post("https://www.elitepvpers.com/forum/private.php?do=insertpm&pmid=", data=params)
         #recipients=Der-Eddy&bccrecipients=&title=L%E4uft&message=L%E4uft+bei%0D%0Adir%21+%3AD&wysiwyg=0&iconid=0&s=&securitytoken=&do=insertpm&pmid=&forward=&sbutton=Submit+Message&savecopy=1&signature=1&parseurl=1

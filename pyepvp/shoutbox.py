@@ -16,7 +16,8 @@ def send(session, message, channel="general"):
             "s": "",
             "securitytoken": session.securityToken
         }
-    params = "do=ajax_chat&channel_id=" + channelDict[channel] + "&chat=" + parser.asciiescape(message) + "&cookieuser=1&s=&securitytoken=" + session.securityToken
+    #params = "do=ajax_chat&channel_id=" + channelDict[channel] + "&chat=" + parser.asciiescape(message) + "&cookieuser=1&s=&securitytoken=" + session.securityToken
+    params = parser.dicttostr(paramsDict)
     logging.info(params)
     session.sess.post("https://www.elitepvpers.com/forum/mgc_cb_evo_ajax.php", data=params)
 

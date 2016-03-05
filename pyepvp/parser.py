@@ -71,6 +71,12 @@ def asciiescape(text):
         text = text.replace(i[0], i[1])
     return text
 
+def dicttostr(dictvar):
+    string = ""
+    for item in dictvar:
+        string += str(item) + "=" + str(dictvar[item]) + "&"
+    return string[:-1]
+
 class forumList:
     forumList = []
 
