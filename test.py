@@ -36,9 +36,9 @@ shoutbox = pyepvp.shoutbox.shoutbox(eddy)
 for i in shoutbox.messages:
     safeprint((i['username'] + ' (' + i['usercolor'] + '): ' + i['message']).encode('utf-8'))
 print('--------------')
-pyepvp.shoutbox.send(eddy, 'Ich bin ein Böt')
+#pyepvp.shoutbox.send(eddy, 'Ich bin ein Böt')
 
-pm = pyepvp.privatemessages.privatemessage(eddy, 'Test tästa', 'Was läuft bei dir\r\ny%E4', 'Dere-Eddy', icon='2').send()
+#pm = pyepvp.privatemessages.privatemessage(eddy, 'Test tästa', 'Was läuft bei dir\r\ny%E4', 'Dere-Eddy', icon='2').send()
 
 print('Unread Messages:')
 pms = pyepvp.privatemessages.privatemessages(eddy)

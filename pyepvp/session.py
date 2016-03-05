@@ -56,8 +56,10 @@ class session:
             raise exceptions.noAuthenticationException()
 
     def __del__(self):
-        #self.logout()
-        pass
+        try:
+            self.logout()
+        except Exception:
+            pass
 
     def login(self, uname, md5):
         loginnurl = "https://www.elitepvpers.com/forum/login.php?do=login" + self.paramsGet
@@ -71,7 +73,7 @@ class session:
             "vb_login_username": uname,
             "security_token": "guest"
         }
-
+        params = parser.dicttostr(params)
         r = self.sess.post(loginnurl, data=params, verify=True)
 
         content = parser.parser(self, "https://www.elitepvpers.com/forum/usercp.php")

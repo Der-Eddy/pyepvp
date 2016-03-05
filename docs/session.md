@@ -4,6 +4,8 @@ Creating a session is required for almost every single method in the library. By
 
 You can also use a guest session with the username `guest`. However, not every function will work with a guest session (e.g. Shoutbox, posting in a topic or TBM functions and such).
 
+### Quick Reference
+#### *class* **pyepvp.session**(uname[, passwd=None[, md5bool=False[, secretWord=None]]])
 
 ### Creating a user session object and using it
 

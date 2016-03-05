@@ -3,6 +3,10 @@ Using the The Black Market API
 To retrieve transaction from the TBM API you need to provide a `secretWord`. In case you don't have provided a secretWord you will get an `tbmSecretwordException`.
 There are several ways to add a secretWord to work with.
 
+### Quick Reference
+#### *class* **pypepvp.tbm**(session[, secretWord=None]])
+#### *method* **pyepvp.tbm.retrieveTransactions**([typeTrans='all'[, custom=None]])
+
 ### Setting a SecretWord
 
     import pyepvp.session
