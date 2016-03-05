@@ -1,5 +1,7 @@
 import logging
 import re
+import json
+import urllib
 from html import escape
 from . import exceptions
 from . import parser
@@ -7,10 +9,10 @@ from . import icons
 from . import regexp
 
 class privatemessage:
-    def __init__(self, session, title, message, recipients, bccrecipients=[''], icon="0", pm_id='Not yet initiliazed', date='Not yet initiliazed', newFlag=False):
+    def __init__(self, session, title, message, recipients, bccrecipients='', icon="0", pm_id='Not yet initiliazed', date='Not yet initiliazed', newFlag=False):
         self.session = session
-        self.title = title
-        self.message = message
+        self.title = parser.asciiescape(title)
+        self.message = parser.asciiescape(message)
         if recipients is list:
             self.recipients = str.join("; ", recipients)
         else:
@@ -27,27 +29,28 @@ class privatemessage:
     def view(self):
         return self.title + ' - ' + self.message
 
-    def send(self):
-        params = {
+    def send(self, savecopy="1"):
+        paramsDict = {
             "do": "insertpm",
-            "message": self.message,
-            "title": self.title,
             "recipients": self.recipients,
-            "bccrecipients": "",
+            "bccrecipients": self.bccrecipients,
+            "title": self.title,
+            "message": self.message,
             "cookieuser": "1",
             "s": "",
             "iconid": self.icon,
             "signature": "1",
             "forward": "",
-            "savecopy": "1",
+            "savecopy": savecopy,
             "pmid": "",
-            "wysiwyg": "1",
-            "sbutton": "Submit",
+            "wysiwyg": "0",
+            "sbutton": "Submit+Message",
             "parseurl": "1",
             "securitytoken": self.session.securityToken
         }
+        params = "recipients=" + self.recipients + "&bccrecipients=" + self.bccrecipients + "&title=" + self.title + "&message=" + self.message + "&wysiwyg=0&iconid=" + self.icon + "&s=&securitytoken=" + self.session.securityToken + "&do=insertpm&pmid=&forward=&sbutton=Submit+Message&savecopy=" + savecopy + "&signature=1&parseurl=1"
         logging.info(params)
-        self.session.sess.post("https://www.elitepvpers.com/forum/private.php?do=insertpm&pmid=", data=params)
+        r = self.session.sess.post("https://www.elitepvpers.com/forum/private.php?do=insertpm&pmid=", data=params)
         #recipients=Der-Eddy&bccrecipients=&title=L%E4uft&message=L%E4uft+bei%0D%0Adir%21+%3AD&wysiwyg=0&iconid=0&s=&securitytoken=&do=insertpm&pmid=&forward=&sbutton=Submit+Message&savecopy=1&signature=1&parseurl=1
 
 class privatemessagesOLD:

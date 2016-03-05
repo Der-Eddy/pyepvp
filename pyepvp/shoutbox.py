@@ -8,14 +8,16 @@ from . import icons
 channelDict = {"general": "0", "english": "1"}
 
 def send(session, message, channel="general"):
-    params = {
+    paramsDict = {
             "do": "ajax_chat",
             "channel_id": channelDict[channel],
-            "chat": message,
+            "chat": parser.asciiescape(message),
             "cookieuser": "1",
             "s": "",
             "securitytoken": session.securityToken
         }
+    params = "do=ajax_chat&channel_id=" + channelDict[channel] + "&chat=" + parser.asciiescape(message) + "&cookieuser=1&s=&securitytoken=" + session.securityToken
+    logging.info(params)
     session.sess.post("https://www.elitepvpers.com/forum/mgc_cb_evo_ajax.php", data=params)
 
 class shoutbox:

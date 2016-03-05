@@ -2,5 +2,6 @@
     "name": "pyepvp",
     "version": "0.2dev",
     "author": "Der-Eddy",
+    "contributors": "[Der-Eddy]",
     "appID": "net.eddy-dev"
 }

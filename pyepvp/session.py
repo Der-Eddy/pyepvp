@@ -18,14 +18,14 @@ class session:
     with open(os.path.abspath(os.path.dirname(os.path.abspath(sys.argv[0])) + "/pyepvp/about.json"), "r") as file:
         about = json.load(file)
     userAgent = system.lower() + ":" + about["appID"] + "." + about["name"] + ":" + about["version"] + " (by " + about["author"] + ")"
-    solaire = about["author"]
+    solaire = about["contributors"]
     sess = requests.session()
     sess.headers = {
         "User-Agent" : userAgent,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-        "Accept-Language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4",
-        "Accept-Encoding": "gzip,deflate",
-        "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
+        "Accept-Encoding": "gzip,deflate,br",
+        "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3",
+        "Content-Type": "application/x-www-form-urlencoded"
     }
     sess.mount("http://", cfscrape.CloudflareAdapter())
     sess.mount("https://", cfscrape.CloudflareAdapter())

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import pyepvp.session
 import pyepvp.parser
 import pyepvp.shoutbox
@@ -6,6 +7,7 @@ import pyepvp.threads
 import pyepvp.tbm
 import re
 import logging, sys, os
+import urllib.parse
 
 def safeprint(s):
     try:
@@ -34,10 +36,10 @@ shoutbox = pyepvp.shoutbox.shoutbox(eddy)
 for i in shoutbox.messages:
     safeprint((i['username'] + ' (' + i['usercolor'] + '): ' + i['message']).encode('utf-8'))
 print('--------------')
-#pyepvp.shoutbox.send(eddy, 'Ich bin ein Бot')
+pyepvp.shoutbox.send(eddy, 'Ich bin ein Böt')
 
-pm = pyepvp.privatemessages.privatemessage(eddy, 'Test', 'läuft bei dir\r\nyea', 'Dere-Eddy')
-#pm.send()
+pm = pyepvp.privatemessages.privatemessage(eddy, 'Test tästa', 'Was läuft bei dir\r\ny%E4', 'Dere-Eddy', icon='2').send()
+
 print('Unread Messages:')
 pms = pyepvp.privatemessages.privatemessages(eddy)
 for message in pms.pms:

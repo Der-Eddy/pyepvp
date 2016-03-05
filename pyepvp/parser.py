@@ -3,6 +3,7 @@ import requests
 import re
 import logging
 import os, sys
+import urllib
 from html import unescape
 from . import regexp
 from . import exceptions
@@ -53,6 +54,21 @@ def htmlescape(text):
     for key, value in d.iteritems():
         if key in text:
             text = text.replace(key, value)
+    return text
+
+def asciiescape(text):
+    replace = (
+        ["\\xf6", "%F6"],
+        ["\\xfc", "%FC"],
+        ["\\xe4", "%E4"],
+        ["\\xdf", "%DF"],
+        ["ö", "%F6"],
+        ["ü", "%FC"],
+        ["ä", "%E4"],
+        ["ß", "%DF"]
+    )
+    for i in replace:
+        text = text.replace(i[0], i[1])
     return text
 
 class forumList:
