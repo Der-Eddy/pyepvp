@@ -14,7 +14,7 @@ class privatemessage:
         self.title = parser.asciiescape(title)
         self.message = parser.asciiescape(message)
         if recipients is list:
-            self.recipients = str.join("; ", recipients)
+            self.recipients = str.join("; ", parser.asciiescape(recipients))
         else:
             self.recipients = recipients
         if bccrecipients is list:

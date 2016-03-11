@@ -17,6 +17,7 @@ class GuestSessionTestCase(unittest.TestCase):
 
     def test_getInsufficientAccessException(self):
         self.assertRaises(pyepvp.exceptions.insufficientAccessException, pyepvp.shoutbox.getShoutbox, self.session)
+        
 
 suite = unittest.TestLoader().loadTestsFromTestCase(GuestSessionTestCase)
 unittest.TextTestRunner(verbosity=2).run(suite)

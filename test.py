@@ -53,6 +53,10 @@ for i in tbmJSON:
     if int(i['amount']) >= 30 and i['note'] == 'Katze':
         print(i)
 
+print('--------------')
+
+eddy.updateNotifications()
+print(eddy.notifications)
 #thread = pyepvp.threads.thread(eddy, 'https://www.elitepvpers.com/forum/premium-main/3734972-der-l-ngste-e-pvp-premium-thread-xxii.html')
 #print(thread.content)
 

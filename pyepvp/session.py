@@ -36,6 +36,20 @@ class session:
     userID = ""
     ranks = ["guest"]
     paramsGet = "&langid=1"
+    notifications = {'last_update': 0,
+                     'unread_private_messages': 0,
+                     'unread_vistor_messages': 0,
+                     'unapproved_visitor_messages': 0,
+                     'incoming_friend_requests': 0,
+                     'groups_request': 0,
+                     'groups_invitations': 0,
+                     'unread_picture_comments': 0,
+                     'unapproved_picture_comments': 0,
+                     'unapproved_group_messages': 0,
+                     'new_mentions': 0,
+                     'new_post_quotes': 0,
+                     'staff_changes': 0,
+                     'subscribed_threads': 0}
 
     def __init__(self, uname, passwd=None, md5bool=False, secretWord=None):
         logging.info("Running on" + exceptions.systemInfo())
@@ -90,3 +104,8 @@ class session:
     def logout(self):
         self.sess.get("https://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken)
         self.tapatalk.logout()
+
+    def updateNotifications(self):
+        url = 'https://www.elitepvpers.com/forum/usercp.php'
+        parser.getUpdates(session, url)
+        self.notifications['last_update'] = time.time()

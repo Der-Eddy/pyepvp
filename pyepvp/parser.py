@@ -40,7 +40,24 @@ def userIDParser(content):
     userID = regexp.match("members\/(\d+)-\D+>Your Profile", content)
     return userID
 
+def getUpdates(session, url):
+    content = parser(session, url)
+    session.notifications['unread_private_messages'] = int(regexp.match("<a href=\"private\.php\"\D+\">(\d+)<\/a>", content, 0))
+    session.notifications['unread_vistor_messages'] = int(regexp.match("Unread Visitor Messages\D+\n.*tab=visitor_messaging#visitor_messagin\D+\">(\d+)<\/a>", content, 0))
+    session.notifications['unapproved_vistor_messages'] = int(regexp.match("Unapproved Visitor Messages\D+\n.*tab=visitor_messaging#visitor_messagin\D+\">(\d+)<\/a>", content, 0))
+    session.notifications['incoming_friend_requests'] = int(regexp.match("profile\.php\?do=buddylist#irc\">(\d+)<\/a>", content, 0))
+    session.notifications['groups_request'] = int(regexp.match("href=\"group\.php\?do=requests\">(\d+)<\/a>", content, 0))
+    session.notifications['groups_invitations'] = int(regexp.match("href=\"group\.php\?do=invitations\">(\d+)<\/a>", content, 0))
+    session.notifications['unread_picture_comments'] = int(regexp.match("href=\"album\.php\?do=unread\">(\d+)<\/a>", content, 0))
+    session.notifications['unapproved_picture_comments'] = int(regexp.match("href=\"album\.php\?do=moderated\">(\d+)<\/a>", content, 0))
+    session.notifications['unapproved_group_messages'] = int(regexp.match("href=\"group\.php\?do=moderatedgms\">(\d+)<\/a>", content, 0))
+    session.notifications['new_mentions'] = int(regexp.match("href=\"usertag\.php\?do=profilenotif&amp;tab=mentions\">(\d+)<\/a>", content, 0))
+    session.notifications['new_post_quotes'] = int(regexp.match("href=\"usertag\.php\?do=profilenotif&amp;tab=quotes\">(\d+)<\/a>", content, 0))
+    session.notifications['staff_changes'] = int(regexp.match("do=staffchanges\">(\d+)<\/a>", content, 0))
+    session.notifications['subscribed_threads'] = int(regexp.match("New Subscribed Threads<span class=\"normal\">: \((\d+)\)<\/span>", content, 0))
+
 def debug(content):
+    logging.info("Debug Content Length: " + len(content))
     with open(os.path.dirname(os.path.abspath(sys.argv[0])) + "/debug.html", 'wb') as file_:
         file_.write(content.encode("utf-8"))
 

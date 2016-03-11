@@ -1,11 +1,11 @@
 import re
 
-def match(pattern, string):
+def match(pattern, string, elseReturn=""):
     match = re.search(re.compile(pattern), str(string))
     try:
         match = match.group(1)
     except AttributeError:
-            match = ""
+            match = elseReturn
     finally:
         return match
 
