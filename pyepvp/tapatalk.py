@@ -1,9 +1,12 @@
 import logging
 import xmlrpc.client
-from . import exceptions
+from .exceptions import *
 
 class CookiesTransport(xmlrpc.client.Transport):
-#http://stackoverflow.com/a/25876504
+    '''
+    Only used for the class tapatalk itself.
+    http://stackoverflow.com/a/25876504
+    '''
     def __init__(self):
         super().__init__()
         self._cookies = []
@@ -20,6 +23,9 @@ class CookiesTransport(xmlrpc.client.Transport):
         return super().parse_response(response)
 
 class tapatalk:
+    '''
+    Logins into the Tapatalk API and stores the cookies for later use.
+    '''
     def __init__(self, id, pw):
         self.proxy = xmlrpc.client.ServerProxy('https://www.elitepvpers.com/forum/mobiquo/mobiquo.php', CookiesTransport())
         loginMsg = self.proxy.login(id.encode(), pw.encode(), True)
@@ -29,6 +35,9 @@ class tapatalk:
             logging.info("Tapatalk-Session created")
 
     def logout(self):
+        '''
+        Logouts from the Tapatalk session, seems not to work everytime.
+        '''
         try:
             self.proxy.logout_user()
         except Exception:

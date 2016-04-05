@@ -1,9 +1,9 @@
 import re
 import logging
-from . import exceptions
-from . import parser
-from . import regexp
-from . import icons
+from .exceptions import *
+from .parser import *
+from .regexp import *
+from .icons import *
 
 channelDict = {"general": "0", "english": "1"}
 
@@ -11,13 +11,13 @@ def send(session, message, channel="general"):
     paramsDict = {
             "do": "ajax_chat",
             "channel_id": channelDict[channel],
-            "chat": parser.asciiescape(message),
+            "chat": asciiescape(message),
             "cookieuser": "1",
             "s": "",
             "securitytoken": session.securityToken
         }
     #params = "do=ajax_chat&channel_id=" + channelDict[channel] + "&chat=" + parser.asciiescape(message) + "&cookieuser=1&s=&securitytoken=" + session.securityToken
-    params = parser.dicttostr(paramsDict)
+    params = dicttostr(paramsDict)
     logging.info(params)
     session.sess.post("https://www.elitepvpers.com/forum/mgc_cb_evo_ajax.php", data=params)
 
@@ -30,14 +30,14 @@ class shoutbox:
     messages = []
 
     def getShoutbox(self, session, site=[1, 1], channel="general"):
-        exceptions.hasPermissions(session.ranks, exceptions.premiumUsers)
+        hasPermissions(session.ranks, premiumUsers)
         messagesList = []
         pHex = re.compile("color:(.*?)\">(.*?)<\/span>")
         pName = re.compile("color:(\S+)\">(.*?)<\/span>")
         for s in range(site[1], site[0] - 1, -1):
-            content = parser.parser(session, "https://www.elitepvpers.com/forum/mgc_cb_evo.php?do=view_archives&page=" + str(s) + "?langid=1")
-            content = regexp.match(re.compile("<div class=\"cw1hforum\">(.+)<\/table>", re.DOTALL), content)
-            for i in icons.smilies:
+            content = parser(session, "https://www.elitepvpers.com/forum/mgc_cb_evo.php?do=view_archives&page=" + str(s) + "?langid=1")
+            content = match(re.compile("<div class=\"cw1hforum\">(.+)<\/table>", re.DOTALL), content)
+            for i in smilies:
                 content = str.replace(str(content), "<img width=\"{0}\" height=\"{1}\" src=\"https://www.elitepvpers.com/forum/images/smilies/{2}\" border=\"0\" alt=\"\" title=\"{3}\" class=\"inlineimg\"/>".format(i[0], i[1], i[2], i[3]), i[4])
             messages = re.findall(re.compile(u"smallfont\">\n(.*)\n.*\n.*\n.*\n.*\n.*members\/(\d+).*html\">(.*)<\/a>\n.*\n.*\n.*\n.*\n(.*)"), content)
             for shout in messages:
@@ -60,7 +60,7 @@ class shoutbox:
                 messagesList.append(messageDict)
             if len(messagesList) < 15:
                 logging.warn("List of shouts to short!")
-                parser.debug(content)
+                debug(content)
         return messagesList
 
     def __init__(self, session, site=[1, 1], channel="general"):

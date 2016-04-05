@@ -8,12 +8,15 @@ import json
 import os
 import sys
 import logging
-from . import regexp
-from . import exceptions
-from . import parser
-from . import tapatalk
+from .regexp import *
+from .exceptions import *
+from .parser import *
+from .tapatalk import *
 
 class session:
+    '''
+    Needed for several methods, logs into an elitepvpers user account and provides several useful informations about that account.
+    '''
     system = platform.system()
     with open(os.path.abspath(os.path.dirname(os.path.abspath(sys.argv[0])) + "/pyepvp/about.json"), "r") as file:
         about = json.load(file)
@@ -32,6 +35,7 @@ class session:
     username = ""
     guestSession = False
     securityToken = ""
+    logoutHash = ""
     secretWord = None
     userID = ""
     ranks = ["guest"]
@@ -49,17 +53,22 @@ class session:
                      'new_mentions': 0,
                      'new_post_quotes': 0,
                      'staff_changes': 0,
-                     'subscribed_threads': 0}
+                     'subscribed_threads': 0,
+                     'elite_gold': 0}
 
-    def __init__(self, uname, passwd=None, md5bool=False, secretWord=None):
-        logging.info("Running on" + exceptions.systemInfo())
+    def __enter__(self):
+        return self
+
+
+    def __init__(self, uname='guest', passwd=None, md5bool=False, secretWord=None):
+        logging.info("Running on" + systemInfo())
         if passwd is not None: #Checks if User Session
             if md5bool == True:
                 md5 = passwd
             else:
                 md5 = hashlib.md5(passwd.encode("utf-8"));md5 = md5.hexdigest()
             self.username = uname
-            self.login(uname, md5)
+            self._login(uname, md5)
             if secretWord is not None:
                 self.secretWord = secretWord
         elif uname == "guest": #Checks if Guest Session
@@ -67,15 +76,18 @@ class session:
             self.guestSession = True
             self.securityToken = "guest"
         else:
-            raise exceptions.noAuthenticationException()
+            raise noAuthenticationException()
+
+    def __exit__(self, *kwargs):
+        self.__del__()
 
     def __del__(self):
         try:
-            self.logout()
+            self._logout()
         except Exception:
             pass
 
-    def login(self, uname, md5):
+    def _login(self, uname, md5):
         loginnurl = "https://www.elitepvpers.com/forum/login.php?do=login" + self.paramsGet
 
         params = {
@@ -87,25 +99,32 @@ class session:
             "vb_login_username": uname,
             "security_token": "guest"
         }
-        params = parser.dicttostr(params)
+        params = dicttostr(params)
         r = self.sess.post(loginnurl, data=params, verify=True)
 
-        content = parser.parser(self, "https://www.elitepvpers.com/forum/usercp.php")
-        self.securityToken = parser.securityTokenParser(content)
+        content = parser(self, "https://www.elitepvpers.com/forum/usercp.php")
+        self.securityToken = securityTokenParser(content)
+        self.logoutHash = logoutHashParser(content)
         if self.securityToken == "guest":
-            raise exceptions.invalidAuthenticationException()
-        self.userID = parser.userIDParser(content)
-        usercontent = parser.parser(self, "https://www.elitepvpers.com/forum/member.php?userid=" + self.userID)
-        self.ranks = parser.rankParser(usercontent)
+            raise invalidAuthenticationException()
+        self.userID = userIDParser(content)
+        usercontent = parser(self, "https://www.elitepvpers.com/forum/member.php?userid=" + self.userID)
+        self.ranks = rankParser(usercontent)
         logging.info("User-Session created: {0}:{1}:{2}".format(self.username, self.userID, self.ranks))
 
-        self.tapatalk = tapatalk.tapatalk(uname, md5)
+        self.tapatalk = tapatalk(uname, md5)
 
     def logout(self):
-        self.sess.get("https://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.securityToken)
+        '''
+        Logout the user session and destroys itself.
+        '''
+        self.__del__()
+
+    def _logout(self):
+        self.sess.get("https://www.elitepvpers.com/forum/login.php?do=logout&logouthash=" + self.logoutHash)
         self.tapatalk.logout()
 
     def updateNotifications(self):
         url = 'https://www.elitepvpers.com/forum/usercp.php'
-        parser.getUpdates(session, url)
+        getUpdates(session, url)
         self.notifications['last_update'] = time.time()

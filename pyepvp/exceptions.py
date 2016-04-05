@@ -1,6 +1,9 @@
 import os, platform
 
 def systemInfo():
+    '''
+    Basically only used for debug purposes.
+    '''
     system = platform.system()
     systemVersion = platform.version()
     pythonBuild = platform.python_build()
@@ -18,6 +21,9 @@ formerRanks = ["founder", "formerstaff", "formervolunteer"]
 premiumUsers = ["premium"] + moderators + undergroundUsers + editorial
 
 def hasPermissions(ranks, group=guest):
+    '''
+    Checks if user has permissions for a method, emits insufficientAccessException if not.
+    '''
     if ranks in guest:
         insufficientAccessException(guest=True)
     hasRight = False

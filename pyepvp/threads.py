@@ -1,14 +1,17 @@
 import re
 import logging
 #from bs4 import BeautifulSoup
-from . import exceptions
-from . import parser
-from . import regexp
+from .exceptions import *
+from .parser import *
+from .regexp import *
 
 def getThread(session, url):
-    content = parser.parser(session, url)
+    content = parser(session, url)
 
 class thread:
+    '''
+    Work in progress
+    '''
     sites = 0
     title = ""
     creator = ""
@@ -24,7 +27,7 @@ class thread:
         match = re.search(p, url)
         self.section = match.group(1)
         self.threadid = match.group(2)
-        content = parser.parser(session, self.getUrl())
+        content = parser(session, self.getUrl())
         self.content = content
 
     def getUrl(self):
