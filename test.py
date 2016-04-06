@@ -18,7 +18,8 @@ with open(os.path.dirname(os.path.abspath(sys.argv[0])) + '/secretword.txt') as 
     secretWord = txt.read()
 #secretWord = 'Super Secret Word'
 eddy = pyepvp.session('Der-Eddy', passwd, True, secretWord)
-print (eddy.securityToken)
+print(eddy.securityToken)
+print('Your Elite*gold: {0}'.format(eddy.elite_gold))
 
 forumList = pyepvp.getSections(eddy)
 print(forumList.getByID(205))
@@ -50,8 +51,8 @@ for i in tbmJSON:
 
 print('--------------')
 
-eddy.updateNotifications()
 print(eddy.notifications)
+
 #thread = pyepvp.thread(eddy, 'https://www.elitepvpers.com/forum/premium-main/3734972-der-l-ngste-e-pvp-premium-thread-xxii.html')
 #print(thread.content)
 

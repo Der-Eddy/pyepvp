@@ -40,7 +40,8 @@ class session:
     userID = ""
     ranks = ["guest"]
     paramsGet = "&langid=1"
-    notifications = {'last_update': 0,
+    refreshTime = 30
+    _notifications = {'last_update': 0,
                      'unread_private_messages': 0,
                      'unread_vistor_messages': 0,
                      'unapproved_visitor_messages': 0,
@@ -53,8 +54,27 @@ class session:
                      'new_mentions': 0,
                      'new_post_quotes': 0,
                      'staff_changes': 0,
-                     'subscribed_threads': 0,
-                     'elite_gold': 0}
+                     'subscribed_threads': 0}
+    @property
+    def notifications(self):
+        if self._notifications['last_update'] + self.refreshTime < time.time():
+            self.updateNotifications()
+        return self._notifications
+
+    @notifications.setter
+    def notifications(self, value):
+        self._notifications = value
+
+    _elite_gold = 0
+    @property
+    def elite_gold(self):
+        if self._notifications['last_update'] + self.refreshTime < time.time():
+            self.updateNotifications()
+        return self._elite_gold
+
+    @elite_gold.setter
+    def elite_gold(self, value):
+        self._elite.gold = value
 
     def __enter__(self):
         return self
@@ -111,6 +131,7 @@ class session:
         usercontent = parser(self, "https://www.elitepvpers.com/forum/member.php?userid=" + self.userID)
         self.ranks = rankParser(usercontent)
         logging.info("User-Session created: {0}:{1}:{2}".format(self.username, self.userID, self.ranks))
+        self.updateNotifications()
 
         self.tapatalk = tapatalk(uname, md5)
 
