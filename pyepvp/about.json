@@ -1,7 +1,5 @@
 {
     "name": "pyepvp",
     "version": "0.3dev",
-    "author": "Der-Eddy",
-    "contributors": "[Der-Eddy]",
-    "appID": "net.eddy-dev"
+    "author": "Der-Eddy"
 }

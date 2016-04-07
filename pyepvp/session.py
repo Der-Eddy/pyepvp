@@ -12,16 +12,15 @@ from .regexp import *
 from .exceptions import *
 from .parser import *
 from .tapatalk import *
+from .user import *
+from . import __version__, __title__, __author__
 
 class session:
     '''
     Needed for several methods, logs into an elitepvpers user account and provides several useful informations about that account.
     '''
     system = platform.system()
-    with open(os.path.abspath(os.path.dirname(os.path.abspath(sys.argv[0])) + "/pyepvp/about.json"), "r") as file:
-        about = json.load(file)
-    userAgent = system.lower() + ":" + about["appID"] + "." + about["name"] + ":" + about["version"] + " (by " + about["author"] + ")"
-    solaire = about["contributors"]
+    userAgent = "{0}:{1}:{2} (by {3})".format(system.lower(), __title__, __version__, __author__)
     sess = requests.session()
     sess.headers = {
         "User-Agent" : userAgent,
@@ -55,16 +54,6 @@ class session:
                      'new_post_quotes': 0,
                      'staff_changes': 0,
                      'subscribed_threads': 0}
-    @property
-    def notifications(self):
-        if self._notifications['last_update'] + self.refreshTime < time.time():
-            self.updateNotifications()
-        return self._notifications
-
-    @notifications.setter
-    def notifications(self, value):
-        self._notifications = value
-
     _elite_gold = 0
     @property
     def elite_gold(self):
@@ -146,6 +135,11 @@ class session:
         self.tapatalk.logout()
 
     def updateNotifications(self):
+        '''
+        Updates the notifications of the session user and returns them.
+        '''
         url = 'https://www.elitepvpers.com/forum/usercp.php'
         getUpdates(session, url)
-        self.notifications['last_update'] = time.time()
+        self._notifications['last_update'] = time.time()
+        logging.info('Updated notifications - {0}'.format(time.time()))
+        return self._notifications

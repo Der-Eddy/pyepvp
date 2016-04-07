@@ -12,6 +12,7 @@ __license__ = 'MIT'
 __copyright__ = 'Copyright 2015-2016 Der-Eddy'
 __version__ = '0.3dev'
 
+from .user import *
 from .session import *
 from .parser import *
 from .shoutbox import *

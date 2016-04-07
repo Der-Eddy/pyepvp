@@ -51,7 +51,7 @@ for i in tbmJSON:
 
 print('--------------')
 
-print(eddy.notifications)
+print(eddy.updateNotifications())
 
 #thread = pyepvp.thread(eddy, 'https://www.elitepvpers.com/forum/premium-main/3734972-der-l-ngste-e-pvp-premium-thread-xxii.html')
 #print(thread.content)
@@ -62,3 +62,6 @@ with pyepvp.session('guest') as guest:
     print (guest.securityToken)
     guestForumList = pyepvp.getSections(guest)
     print(guestForumList.getByID(489))
+
+test = pyepvp.user('Der-Eddy', '984054')
+print(test.ranks)

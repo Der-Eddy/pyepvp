@@ -8,8 +8,9 @@ def systemInfo():
     systemVersion = platform.version()
     pythonBuild = platform.python_build()
     pythonVersion = platform.python_version()
+    from . import __title__, __version__
 
-    systemInfo = " (OS: " + system + " " + systemVersion + " | Python Version: " + pythonBuild[0] + ")"
+    systemInfo = " (OS: {0} {1} | Python Version: {2} | {3} Version: {4})".format(system, systemVersion, pythonBuild[0], __title__, __version__)
     return systemInfo
 
 user = ["user"]
