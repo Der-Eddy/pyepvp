@@ -21,7 +21,7 @@ class session:
     '''
     system = platform.system()
     userAgent = "{0}:{1}:{2} (by {3})".format(system.lower(), __title__, __version__, __author__)
-    sess = requests.session()
+    sess = cfscrape.create_scraper()
     sess.headers = {
         "User-Agent" : userAgent,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -29,8 +29,6 @@ class session:
         "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3",
         "Content-Type": "application/x-www-form-urlencoded"
     }
-    sess.mount("http://", cfscrape.CloudflareAdapter())
-    sess.mount("https://", cfscrape.CloudflareAdapter())
     username = ""
     guestSession = False
     securityToken = ""

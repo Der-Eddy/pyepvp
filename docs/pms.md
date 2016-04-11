@@ -10,5 +10,5 @@ Currently in development
 
 ### Sample Usage
 
-    import pyepvp.privatemessages
-    pm = pyepvp.privatemessages.privatemessage(session, 'Test', 'Test Message\r\neven with new lines!', 'Der-Eddy', icon='2').send()
+    import pyepvp
+    pm = pyepvp.privatemessage(session, 'Test', 'Test Message\r\neven with new lines!', 'Der-Eddy', icon='2').send()

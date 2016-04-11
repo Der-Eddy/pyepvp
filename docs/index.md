@@ -1,6 +1,6 @@
 ![logo](https://github.com/Der-Eddy/pyepvp/raw/master/logo.png)
 
-[![Build Status](https://travis-ci.org/Der-Eddy/pyepvp.svg)](https://travis-ci.org/Der-Eddy/pyepvp)  [![Doc Status](https://readthedocs.org/projects/pyepvp/badge/?version=latest)](http://pyepvp.readthedocs.org/en/latest/)  [![Issues](https://img.shields.io/github/issues/Der-Eddy/pyepvp.svg)](https://github.com/Der-Eddy/pyepvp/issues)  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Der-Eddy/pyepvp/blob/master/LICENSE)  
+[![Build Status](https://img.shields.io/pypi/v/pyepvp.svg)](https://pypi.python.org/pypi/pyepvp) [![Build Status](https://travis-ci.org/Der-Eddy/pyepvp.svg)](https://travis-ci.org/Der-Eddy/pyepvp)  [![Doc Status](https://readthedocs.org/projects/pyepvp/badge/?version=latest)](https://pythonhosted.org/pyepvp/)  [![Issues](https://img.shields.io/github/issues/Der-Eddy/pyepvp.svg)](https://github.com/Der-Eddy/pyepvp/issues)  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Der-Eddy/pyepvp/blob/master/LICENSE)  
 A Python API based on the idea of [.NET epvpapi](https://github.com/Mostey/epvpapi)  
 Currently in planning phase, let me know if you have any idea for my project!
 
@@ -10,7 +10,7 @@ Currently in planning phase, let me know if you have any idea for my project!
 Requirements
 -------------
 
-First of all, you'll need Python >3.5 and some Packages from PyPI, easily installed with pip:
+First of all, you'll need Python >3.4 and some Packages from PyPI, easily installed with pip:
 
     pip install requests
     pip install PyExecJS
@@ -18,6 +18,26 @@ First of all, you'll need Python >3.5 and some Packages from PyPI, easily instal
 
 (OPTIONAL)You will also need to install NodeJS, if you want to bypass the Cloudflare Check  
 Install Instructions can be found [here](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions)
+
+
+Samples and Usage
+-------------
+For that, you should currently take a look at `test.py`  
+
+    import pyepvp
+    eddy = pyepvp.session("Der-Eddy", passwordmd5hash, True, secretWord)
+    print (eddy.securityToken)
+
+    eddy.logout()
+    guest = pyepvp.session("guest")
+    print (guest.securityToken)
+
+
+ToDo
+-------------
+* Add more functionality (TBM, Thread/Post methods and such)
+* Update the documentation
+* Make a python package out of it (So you can install it through pip)
 
 
 License

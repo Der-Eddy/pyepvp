@@ -27,9 +27,9 @@ print(forumList.getByName('e*pvp News'))
 print(forumList.isIn(('205', 'e*pvp News')))
 
 print('--------------')
-shoutbox = pyepvp.shoutbox(eddy)
+sb = pyepvp.shoutbox(eddy)
 #print(shoutbox.messages[1])
-for i in shoutbox.messages:
+for i in sb.messages:
     safeprint((i['username'] + ' (' + i['usercolor'] + '): ' + i['message']).encode('utf-8'))
 print('--------------')
 #pyepvp.shoutbox.send(eddy, 'Ich bin ein Böt')

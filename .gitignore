@@ -66,4 +66,6 @@ logo.psd
 modfe.py
 modcp.py
 pn.py
+shoutbox.py
 site/
+docs/site/

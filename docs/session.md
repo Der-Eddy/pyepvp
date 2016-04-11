@@ -9,10 +9,10 @@ You can also use a guest session with the username `guest`. However, not every f
 
 ### Creating a user session object and using it
 
-To create a session simple import the `pyepvp.session` module and use the `session` method
+To create a session simple import the `pyepvp` module and use the `session` method
 
-    import pyepvp.session
-    eddy = pyepvp.session.session("Der-Eddy", passwordmd5hash, True, superSecretWord)
+    import pyepvp
+    eddy = pyepvp.session("Der-Eddy", passwordmd5hash, True, superSecretWord)
     #do something
     print (eddy.securityToken)
 
@@ -20,7 +20,12 @@ Everything but the username is optional, however you will need to provide either
 
 Other Example
 
-    eddy = pyepvp.session.session("Der-Eddy", normalPassword)
+    eddy = pyepvp.session("Der-Eddy", normalPassword)
+
+Or you can use it in a with statement
+
+    with pyepvp.session("Der-Eddy", normalPassword) as eddy:
+        #do something
 
 However, keep in mind if you don't set a secret word then you can't use specific TBM functions.
 
@@ -29,6 +34,6 @@ However, keep in mind if you don't set a secret word then you can't use specific
 
 For that, simply use as username `guest`
 
-    guest = pyepvp.session.session("guest")
+    guest = pyepvp.session("guest")
 
 Keep in mind that guest session has limited functionality
